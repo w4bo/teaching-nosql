@@ -11,6 +11,7 @@ jobs:
         run: |
           chmod +x start.sh
           ./start.sh
+          ./stop.sh
   launch-windows:
     runs-on: windows-latest
     steps:
@@ -20,3 +21,4 @@ jobs:
       - name: Build Images
         run: |
           ./start.bat
+          ./stop.bat
