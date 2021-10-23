@@ -9,9 +9,7 @@ jobs:
           ref: main
       - name: Build Images
         run: |
-          chmod +x *.sh
-          ./start.sh
-          ./stop.sh
+          docker-compose up
 #  launch-windows:
 #    runs-on: windows-latest
 #    steps:
