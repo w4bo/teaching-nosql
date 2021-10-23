@@ -2,8 +2,9 @@ FROM node:17
 # Create app directory
 WORKDIR /usr/src/app
 # Bundle app source
-COPY . .
+COPY package.json .
 RUN npm install
+COPY src ./src
 RUN npm run test
 # If you are building your code for production
 # RUN npm ci --only=production
