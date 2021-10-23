@@ -1,4 +1,10 @@
 {
   "name": "nodejs-nosql",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
