@@ -1,7 +1,7 @@
 name: "build"
 on: [push, pull_request]
 jobs:
-  launch:
+  launch-linux:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -9,4 +9,14 @@ jobs:
           ref: main
       - name: Build Images
         run: |
+          chmod +x start.sh
           ./start.sh
+  launch-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Build Images
+        run: |
+          ./start.bat
