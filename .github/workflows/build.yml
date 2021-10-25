@@ -10,6 +10,8 @@ jobs:
       - name: Build Images
         run: |
           chmod +x *.sh
+          npm run install
+          ./build.sh
           ./start.sh
           ./stop.sh
 #  launch-windows:
