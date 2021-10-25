@@ -9,6 +9,7 @@ jobs:
           ref: main
       - name: Build Images
         run: |
+          chmod +x *.sh
           ./start.sh
           ./stop.sh
 #  launch-windows:
