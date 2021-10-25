@@ -1,18 +1,13 @@
-version: '3'
+version: '3.2'
 
 services:
-  nodejs:
-    build: .
-    depends_on:
-      - mongo
-    links:
-      - mongo
-
   mongo:
     image: "mongo:${MONGO_VERSION}"
     restart: always
     ports:
-      - "27017:27017"
+      - "${MONGO_PORT}:${MONGO_PORT}"
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PWD}
+    logging:
+      driver: "none"

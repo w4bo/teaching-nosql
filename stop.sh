@@ -1,3 +1,3 @@
 #!/bin/bash
 set -e
-docker stop $(docker ps -q)
+docker-compose down

@@ -1,4 +1,11 @@
 #!/bin/bash
 set -e
-docker build . -t nosql/nodejs
-docker run -p 8080:8080 -d nosql/nodejs
+if [ -f .env ]
+then
+  export $(cat .env | sed 's/#.*//g' | xargs)
+fi
+docker-compose up --build -d
+./wait-for-it.sh 127.0.0.1:${MONGO_PORT} --strict --timeout=10 -- echo "Mongo is up"
+npm run test
+# docker build . -t nosql/nodejs
+# docker run -p 8080:8080 -d nosql/nodejs
