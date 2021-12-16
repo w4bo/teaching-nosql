@@ -4,28 +4,31 @@ const {MongoClient} = require('mongodb');
 const MONGO_USER = process.env.MONGO_USER
 const MONGO_PWD = process.env.MONGO_PWD
 const MONGO_URL = process.env.MONGO_URL
-const URI = "mongodb://" + MONGO_USER + ":" + MONGO_PWD + "@" + MONGO_URL + ":27017/"
+const URI = "mongodb://" + MONGO_URL + ":27017/"
 
-async function main() {
-    const client = new MongoClient(URI);
+const client = new MongoClient(URI);
+
+async function connect() {
     try {
         // Connect to the MongoDB cluster
         await client.connect();
-        // Make the appropriate DB calls
-        return await listDatabases(client);
     } catch (e) {
         console.error(e);
-        return {}
-    } finally {
-        await client.close();
     }
 }
 
-async function listDatabases(client) {
-    const databasesList = await client.db().admin().listDatabases();
-    return databasesList.databases;
+async function listDatabases() {
+    const result = await client.db().admin().listDatabases()
+    return result.databases;
 }
 
-module.exports = main;
+async function getRestaurants() {
+    const cursor = client.db("exercises").collection("restaurants").find({}, {});
+    return await cursor.toArray();
+}
 
-main().catch(console.error);
+
+module.exports = {};
+module.exports.connect = connect;
+module.exports.listDatabases = listDatabases;
+module.exports.getRestaurants = getRestaurants;
