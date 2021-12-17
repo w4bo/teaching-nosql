@@ -13,6 +13,7 @@ jobs:
           wget http://big.csr.unibo.it/projects/nosql-datasets/games.bson
           wget http://big.csr.unibo.it/projects/nosql-datasets/restaurants.bson
           wget http://big.csr.unibo.it/projects/nosql-datasets/yelp-business.bson
+          ls -las
           cd -
           chmod +x *.sh
           ./build.sh
