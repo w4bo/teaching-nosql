@@ -1,0 +1,207 @@
+1
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        "_id": "$box.players.player"
+    }
+},{
+    $lookup: {
+        from: "nba2016players",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+}])
+
+2
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        "_id": "$box.players.player"
+    }
+},{
+    $lookup: {
+        from: "nba2016players",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+},{
+    $match: {
+        "stats": {$ne: []}
+    }
+}])
+
+3
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        "_id": "$box.players.player",
+		"totPunti": {"$sum": "$box.players.pts"}
+    }
+},{
+    $lookup: {
+        from: "nba2016players",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+},{
+    $unwind: "$stats"
+},{
+	$project: {
+		"_id": 1,
+		"totPunti": 1,
+		"stats.contract.amount": 1
+	}
+}])
+
+4
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        "_id": "$box.players.player",
+		"totPunti": {"$sum": "$box.players.pts"}
+    }
+},{
+    $lookup: {
+        from: "nba2016players",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+},{
+	$unwind: "$stats"
+},{
+	$project: {
+		"_id": 1,
+		"costoPerPunto": {$multiply: [{$divide: ["$totPunti", "$stats.contract.amount"]}, 1000]}
+	}
+},{
+	$sort: {
+		"costoPerPunto": -1
+	}
+}])
+
+5
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": "$teams.name"
+    }
+},{
+	$project: {
+		"_id": {$slice: [{ $split: ["$_id"," "] }, -1] }
+	}
+},{
+	$unwind: "$_id"
+},{
+    $lookup: {
+        from: "nba2016teams",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+}])
+
+6
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": "$teams.name",
+		"totPunti": {"$sum": "$teams.score"}
+    }
+},{
+	$project: {
+		"_id": {$slice: [{ $split: ["$_id"," "] }, -1] },
+		"totPunti": 1
+	}
+},{
+	$unwind: "$_id"
+},{
+    $lookup: {
+        from: "nba2016teams",
+        localField: "_id",
+        foreignField: "name",
+        as: "stats"
+    }
+},{
+	$unwind: "$stats"
+},{
+	$project: {
+		"_id": 1,
+		"totPunti": 1,
+		"ticketPrice": "$stats.budget.ticketPrice.amount"
+	}
+}])
+
+7
+db.yelpbusiness.aggregate([{
+	$lookup: {
+        from: "cities",
+        localField: "city",
+        foreignField: "city",
+        as: "stats"
+	}
+}])
+
+8
+db.yelpbusiness.aggregate([{
+	$lookup: {
+        from: "cities",
+        localField: "city",
+        foreignField: "city",
+        as: "stats"
+	}
+},{
+	$unwind: "$stats"
+},{
+	$unwind: "$categories"
+},{
+	$group: {
+		"_id": "$categories",
+		"avgPopulation": {"$avg": "$stats.population"}
+	}
+},{
+    $sort: {
+        avgPopulation: -1
+    }
+}])
+
+
+9
+db.yelpbusiness.aggregate([{
+	$lookup: {
+        from: "cities",
+        localField: "city",
+        foreignField: "city",
+        as: "stats"
+	}
+},{
+	$unwind: "$stats"
+},{
+	$unwind: "$categories"
+},{
+	$group: {
+		"_id": "$categories",
+		"avgRank": {"$avg": "$stats.rank"}
+	}
+},{
+    $sort: {
+        avgRank: -1
+    }
+}])

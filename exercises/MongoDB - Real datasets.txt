@@ -1,0 +1,53 @@
+## VACCINI
+
+Visualizzare la distribuzione mensile dei dati (quanti documenti per ogni mese)
+
+Trovare le 10 città col maggior volume di dati
+
+Trovare le 10 città col miglior sentiment medio. Visualizzare anche il volume di dati
+
+Migliorare la query precedente proponendo una misura che moltiplichi il sentiment medio per il volume di dati
+
+Visualizzare la distribuzione dei dati per canale (CHANNELMEDIATYPE)
+
+Suddividere il testo in parole
+db.vaccini.aggregate([
+	{$project: {
+		parole: {
+			$split: [{ $toLower: '$CONTENT' }, ' ']
+		}
+	}}
+])
+
+Trovare le parole più utilizzate
+
+Trovare le 10 parole più utilizzate con sentiment positivo/negativo
+
+Creare un indice di testo sui campi CONTENT e TITLE, con pesi 1 e 2 rispettivamente
+db.vaccini.createIndex({
+	TITLE: "text",
+    CONTENT: "text"
+},{
+    weights: {
+		TITLE: 2,
+		CONTENT: 1
+    },
+    name: "TextIndex"
+})
+
+Contare i post in cui si parla di bambini. Tornano i conti rispetto a quanto trovato con la query precedente?
+
+Contare i post in cui si parla di autismo e calcolare il sentiment medio
+
+Contare i post in cui si parla di Burioni e calcolare il sentiment medio
+
+Cercare i post in cui si parla di autismo e di Burioni e (manualmente) verificare se il valore di SENTIMENT_CRAWLER è corretto rispetto al testo del CONTENT
+
+Trovare gli hashtag più utilizzati
+
+
+## POLITICA
+
+Quali sono stati i partiti più "chiacchierati" nel giorno delle elezioni?
+
+Hashtag più utilizzati?

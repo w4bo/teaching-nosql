@@ -1,0 +1,42 @@
+1
+db.restaurants.createIndex({name: "text"})
+
+2
+db.restaurants.find({$text: {$search: "baker"}})
+
+3
+db.restaurants.find({$text: {$search: "bake"}})
+
+4
+db.yelpbusiness.createIndex({categories: "text"})
+
+5
+db.yelpbusiness.find({$text: {$search: "service"}})
+
+6
+db.yelpbusiness.find({$text: {$search: "services"}})
+
+7
+db.yelpbusiness.find({$text: {$search: "professional service"}})
+
+8
+db.yelpbusiness.find({$text: {$search: "\"professional service\""}})
+
+9
+db.yelpbusiness.find({$text: {$search: "professional -service"}})
+
+
+10
+db.vaccini.createIndex(
+   {
+     TITLE: "text",
+     CONTENT: "text"
+   },
+   {
+     weights: {
+		TITLE: 2,
+		CONTENT: 1
+     },
+     name: "TextIndex"
+   }
+ )
