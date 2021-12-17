@@ -30,7 +30,7 @@
 10.	Visualizzare i ristoranti il cui tipo di cucina non esiste 
 
 
-## Yelpbusiness
+## Yelp business
 11.	Visualizzare tutti i business che hanno ricevuto almeno 10 recensioni (review_count) E si trovano in Arizona o in Nevada (state = NV o AZ) 
 
 12.	Visualizzare tutti i business che hanno ricevuto almeno 10 recensioni (review_count) O si trovano in Arizona o in Nevada (state = NV o AZ) 

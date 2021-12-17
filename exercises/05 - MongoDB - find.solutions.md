@@ -64,7 +64,7 @@
     db.restaurants.find({cuisine:	 {$exists: false} })
     ```
 
-## Yelpbusiness
+## Yelp business
 11.	Visualizzare tutti i business che hanno ricevuto almeno 10 recensioni (review_count) E si trovano in Arizona o in Nevada (state = NV o AZ) 
 
     ```
