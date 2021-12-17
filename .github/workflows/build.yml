@@ -9,17 +9,12 @@ jobs:
           ref: main
       - name: Build Images
         run: |
+          cd mongodb
+          wget http://big.csr.unibo.it/projects/nosql-datasets/games.bson
+          wget http://big.csr.unibo.it/projects/nosql-datasets/restaurants.bson
+          wget http://big.csr.unibo.it/projects/nosql-datasets/yelp-business.bson
+          cd -
           chmod +x *.sh
           ./build.sh
           ./start.sh
           ./stop.sh
-#  launch-windows:
-#    runs-on: windows-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          ref: main
-#      - name: Build Images
-#        run: |
-#          ./start.bat
-#          ./stop.bat
