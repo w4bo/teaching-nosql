@@ -1,5 +1,7 @@
 # NoSQL in Action!
 
+[![build](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml)
+
 NoSQL exercises against document, graph, and columnar NoSQL databases.
 Checkout the CI `./.github/workflows/build.yml` to see how to execute the code.
 
