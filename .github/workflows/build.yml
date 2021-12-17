@@ -10,9 +10,9 @@ jobs:
       - name: Build Images
         run: |
           cd mongodb/data
-          wget http://big.csr.unibo.it/projects/nosql-datasets/games.bson
-          wget http://big.csr.unibo.it/projects/nosql-datasets/restaurants.bson
-          wget http://big.csr.unibo.it/projects/nosql-datasets/yelp-business.bson
+          wget http://big.csr.unibo.it/projects/nosql-datasets/games.bson -q
+          wget http://big.csr.unibo.it/projects/nosql-datasets/restaurants.bson -q
+          wget http://big.csr.unibo.it/projects/nosql-datasets/yelp-business.bson -q
           ls -las
           cd -
           chmod +x *.sh
