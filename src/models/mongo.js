@@ -5,7 +5,7 @@ const {MongoClient} = require('mongodb');
 // const MONGO_PWD = process.env.MONGO_PWD
 const MONGO_URL = process.env.MONGO_URL
 // const URI = "mongodb://" + MONGO_USER + ":" + MONGO_PWD + "@" + MONGO_URL + ":27017/"
-const URI = "mongodb://" + MONGO_USER + ":" + MONGO_PWD + "@" + MONGO_URL + ":27017/"
+const URI = "mongodb://" + MONGO_URL + ":27017/"
 const client = new MongoClient(URI);
 let db = null
 
