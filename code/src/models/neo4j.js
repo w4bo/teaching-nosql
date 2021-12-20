@@ -5,7 +5,6 @@ let session = null
 
 async function connect() {
     try {
-        console.log(process.env)
         session = client.session() // { database:'neo4j', defaultAccessMode: neo4j.session.READ }
     } catch (e) {
         console.error(e);
