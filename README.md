@@ -2,7 +2,7 @@
 
 [![build](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml)
 
-NoSQL exercises against document, graph, and columnar NoSQL databases.
+NoSQL (Not Only SQL) exercises against key-value, document, graph, and columnar NoSQL databases.
 
 ## Setting up the software stack
 
