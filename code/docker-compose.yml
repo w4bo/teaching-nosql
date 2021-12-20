@@ -1,7 +1,6 @@
 version: "3.9"
 services:
   mongodb:
-    # build: ./mongodb
     image: mongo
     hostname: mongodb
     container_name: mongodb
@@ -79,5 +78,5 @@ services:
       cassandra:
         condition: service_healthy
     volumes:
-      - ./cassandra/data/schema.cql:/schema.cql
+      - ./cassandra/data:/
     command: /bin/bash -c "echo loading cassandra keyspace && cqlsh cassandra -f /schema.cql"
