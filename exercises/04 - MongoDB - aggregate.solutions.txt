@@ -1,0 +1,875 @@
+1
+db.yelpbusiness.aggregate([
+    {$project: {"totalStars": { $multiply: ["$stars","$review_count"]} }}
+])
+
+2
+db.yelpbusiness.aggregate([{
+    $project: {
+        "totalStars2": { 
+			$subtract: [
+				{$multiply: ["$stars","$review_count"]},
+				"$is_open"
+			]
+		},
+        "is_open": 1
+		"stars": 1,
+		"review_count": 1
+    }
+}])
+
+3
+db.yelpbusiness.aggregate([{
+    $project: {
+        "isNevada": { $eq: ["$state","NV"] },
+        "state": 1
+    }
+}])
+
+4
+db.yelpbusiness.aggregate([{
+    $match: {
+        "state": "NV"
+    }
+},{
+    $project: {
+        "totalStars": { $multiply: ["$stars","$review_count"]},
+        "state": 1
+    }
+}])
+
+5
+db.yelpbusiness.aggregate([{
+    $project: {
+        "totalStars3": { 
+			$cond: [
+				{$eq: ["$state","NV"]},
+				{$multiply: ["$stars","$review_count"]},
+				{$divide: ["$stars","$review_count"]}
+			]
+		},
+        "state": 1,
+        "stars": 1,
+        "review_count": 1
+    }
+}])
+
+6
+db.games.aggregate([{
+    $project: {
+        "anno": { $year: "$date"},
+        "mese": { $month: "$date"},
+        "giorno": { $dayOfMonth: "$date"},
+        "date": 1
+    }
+}])
+	
+7
+db.games.aggregate([{
+    $project: {
+        "anniTrascorsi": { 
+			$subtract: [
+				{ $year: new Date() },
+				{ $year: "$date" }
+			] 
+		},
+        "date": 1
+    }
+}])
+
+8
+db.games.aggregate([{
+    $project: {
+        "giorniTrascorsi": { 
+			$trunc: { 
+				$divide: [
+					{ $subtract: [ 
+						new Date(), 
+						"$date" 
+					]}, 
+					1000*60*60*24
+				]
+			} 
+		},
+        "date": 1
+    }
+}])
+
+9
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]}
+    }
+}])
+
+10
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]}
+    }
+},{
+    $project: {
+        "diffPunti": { 
+			$abs: { 
+				$subtract: ["$team1.score","$team2.score"] 
+			}
+		},
+        "punti1": "$team1.score",
+        "punti2": "$team2.score"
+    } 
+}])
+
+11
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]}
+    }
+},{
+    $project: {
+        "diffPunti": { 
+			$abs: { 
+				$subtract: ["$team1.score","$team2.score"] 
+			}
+		},
+        "unPuntoDiDiff": { 
+			$eq: [
+				{
+					$abs: { 
+						$subtract: ["$team1.score","$team2.score"] 
+					} 
+				}, 
+				1
+			] 
+		},
+        "punti1": "$team1.score",
+        "punti2": "$team2.score"
+    } 
+}])
+
+12
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]}
+    }
+},{
+    $project: {
+        "diffPunti": { 
+			$abs: { 
+				$subtract: ["$team1.score","$team2.score"] 
+			}
+		},
+        "unPuntoDiDiff": { 
+			$eq: [
+				{
+					$abs: { 
+						$subtract: ["$team1.score","$team2.score"] 
+					} 
+				}, 
+				1
+			] 
+		},
+        "punti1": "$team1.score",
+        "punti2": "$team2.score"
+    } 
+},{
+    $match: {
+        "diffPunti": 1
+    }
+}])
+
+13
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]},
+    }
+},{
+    $project: {
+        "diffPunti": { 
+			$abs: { 
+				$subtract: ["$team1.score","$team2.score"] 
+			}
+		},
+        "unPuntoDiDiff": { 
+			$eq: [
+				{
+					$abs: { 
+						$subtract: ["$team1.score","$team2.score"] 
+					} 
+				}, 
+				1
+			] 
+		},
+        "punti1": "$team1.score",
+        "punti2": "$team2.score",
+        "team1": 1,
+        "team2": 1
+    } 
+},{
+    $match: {
+        "unPuntoDiDiff": true,
+        $or: [
+            {"team1.home":true,"team1.won":1},
+            {$and: [{"team2.home":true},{"team2.won":1}]}
+        ]
+    }
+}])
+
+db.games.aggregate([{
+    $match: {
+        teams: { $elemMatch: { home: true, won: 1 } }
+    }
+},{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]},
+    }
+},{
+    $project: {
+        "diffPunti": { 
+			$abs: { 
+				$subtract: ["$team1.score","$team2.score"] 
+			}
+		},
+        "unPuntoDiDiff": { 
+			$eq: [
+				{
+					$abs: { 
+						$subtract: ["$team1.score","$team2.score"] 
+					} 
+				}, 
+				1
+			] 
+		},
+        "punti1": "$team1.score",
+        "punti2": "$team2.score"
+    } 
+},{
+    $match: {
+        "unPuntoDiDiff": true
+    }
+}])
+
+14
+db.restaurants.aggregate([{
+    $project: {
+        "fullAddress": {
+			$concat: [
+				"$address.zipcode",
+				"; ",
+				"$address.street",
+				"; ",
+				"$address.building"
+			]
+		},
+        "address": 1
+    }
+}])
+
+15
+db.restaurants.aggregate([{
+    $project: {
+        "borough3": {
+			$substr: ["$borough",0,3]
+		},
+        "borough": 1
+    }
+}])
+
+16
+db.restaurants.aggregate([{
+    $project: {
+        "borough3": {
+			$toUpper: {
+				$substr: ["$borough",0,3]
+			} 
+		},
+        "borough": 1
+    }
+}])
+
+
+17
+db.restaurants.aggregate([{
+    $group: {
+        "_id": "$borough"
+    }
+}])
+
+18
+db.restaurants.aggregate([{
+    $group: {
+        "_id": "$borough",
+        "nRestaurants": { "$sum": 1 }
+    }
+}])
+
+19
+db.restaurants.aggregate([{
+    $group: {
+        "_id": "$cuisine",
+        "nRestaurants": { "$sum": 1 }
+    }
+},{
+    $sort: {
+        "_id": 1
+    }
+}])
+
+20
+db.restaurants.aggregate([{
+    $group: {
+        "_id": "$cuisine",
+        "nRestaurants": { "$sum": 1 }
+    }
+},{
+    $sort: {
+        "nRestaurants": -1
+    }
+}])
+
+21
+db.yelpbusiness.aggregate([{
+    $group: {
+        "_id": "$state",
+        "avgStars": { "$avg": "$stars" }
+    }
+}])
+
+22
+db.yelpbusiness.aggregate([{
+    $group: {
+        "_id": {
+			"state": "$state", 
+			"city": "$city"
+		},
+        "avgStars": { "$avg": "$stars" }
+    }
+}])
+
+23
+db.yelpbusiness.aggregate([{
+    $group: {
+        "_id": "$state",
+        "avgStars": { "$avg": "$stars" },
+        "sumReviews": { "$sum": "$review_count" }
+    }
+}])
+
+24
+db.yelpbusiness.aggregate([{
+    $match: {
+        "state": "NV"
+    }
+},{
+    $group: {
+        "_id": "$city",
+        "avgStars": { "$avg": "$stars" },
+        "sumReviews": { "$sum": "$review_count" }
+    }
+}])
+
+25
+db.yelpbusiness.aggregate([{
+    $match: {
+        "state": "NV"
+    }
+},{
+    $group: {
+        "_id": "$city",
+        "avgStars": { "$avg": "$stars" },
+        "sumReviews": { "$sum": "$review_count" }
+    }
+},{
+    $match: {
+        "avgStars": { $gte: 4.5 }
+    }
+}])
+
+26
+db.yelpbusiness.aggregate([{
+    $match: {
+        "state": "NV"
+    }
+},{
+    $group: {
+        "_id": "$city",
+        "avgStars": { "$avg": "$stars" },
+        "sumReviews": { "$sum": "$review_count" }
+    }
+},{
+    $match: {
+        "avgStars": { $gte: 4.5 },
+        "sumReviews": { $gte: 100 }
+    }
+}])
+
+27
+db.yelpbusiness.aggregate([{
+    $group: {
+        "_id": "$state",
+        "maxStars": { "$max": "$stars" }
+    }
+}])
+
+28
+db.yelpbusiness.aggregate([{
+    $sort: {
+        "stars": -1
+    }
+},{
+    $group: {
+        "_id": "$state",
+        "maxStars": { "$first": "$stars" }
+    }
+}])
+
+29
+db.yelpbusiness.aggregate([{
+    $group: {
+        "_id": "$state",
+        "cities": { "$addToSet": "$city" }
+    }
+}])
+
+30
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]},
+        "data": {$dateToString: {format: "%Y-%m-%d", date: "$date" }}
+    }
+},{
+    $project: {
+        "idPartita": { $concat: ["$data",": ","$team1.name"," vs ","$team2.name"] }
+    } 
+}])
+
+31
+db.games.aggregate([{
+    $unwind: "$teams"
+}])
+
+32
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": "$_id",
+        "totPunti": { "$sum": "$teams.score" }
+    }
+}])
+
+32
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": "$_id",
+        "totPunti": { "$sum": "$teams.score" }
+    }
+}])
+
+33
+db.games.aggregate([{
+    $project: {
+        "team1": {$arrayElemAt: ["$teams", 0]},
+        "team2": {$arrayElemAt: ["$teams", 1]},
+        "data": {$dateToString: {format: "%Y-%m-%d", date: "$date" }},
+        "teams": 1
+    }
+},{
+    $project: {
+        "idPartita": { $concat: ["$data",": ","$team1.name"," vs ","$team2.name"] },
+        "teams": 1
+    } 
+},{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": "$idPartita",
+        "totPunti": {"$sum": "$teams.score"}
+    }
+}])
+
+34
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": {$year: "$date"},
+        "totPunti": { "$sum": "$teams.score" }
+    }
+}])
+
+35
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": { 
+			"anno": {$year: "$date"}, 
+			"squadra": "$teams.name" 
+		},
+        "totPunti": { "$sum": "$teams.score" }
+    }
+}])
+
+36
+db.games.aggregate([{
+    $unwind: "$teams"
+},{
+    $group: {
+        "_id": { "anno": {$year: "$date"}, "squadra": "$teams.name" },
+        "totPunti": { "$sum": "$teams.score" }
+    }
+},{
+    $sort: {
+        "_id.anno": 1,
+        "totPunti": -1
+    }
+}])
+
+37
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+}])
+
+38
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        "_id": "$box.players.player",
+        "totPunti": {"$sum": "$box.players.pts"}
+    }
+},{
+    $sort: {
+        "totPunti": -1
+    }
+}])
+
+39
+db.restaurants.aggregate([{
+    $unwind: "$grades"
+}])
+
+40
+db.restaurants.aggregate([{
+    $unwind: "$grades"
+},{
+    $group: {
+        "_id": "$borough",
+        "avgScore": {"$avg": "$grades.score"}
+    }
+}])
+
+41
+db.restaurants.aggregate([{
+    $unwind: "$grades"
+},{
+    $group: {
+        "_id": "$cuisine",
+        "avgScore": {"$avg": "$grades.score"}
+    }
+}])
+
+42
+db.restaurants.aggregate([{
+    $unwind: "$grades"
+},{
+    $project: {
+        "cuisine": 1,
+        "grades": 1,
+        "year": {$year: "$grades.date"}
+    }
+},{
+    $match: {
+        "year": 2015
+    }
+},{
+    $group: {
+        "_id": "$cuisine",
+        "avgScore": {"$avg": "$grades.score"}
+    }
+}])
+
+43
+db.restaurants.aggregate([{
+    $unwind: "$grades"
+},{
+    $group: {
+        "_id": {"year": {$year: "$grades.date"} },
+        "numGrades": {"$sum": 1}
+    }
+}])
+
+44
+db.yelpbusiness.aggregate([{
+	$unwind: "$attributes"
+},{
+	$group: {
+		_id: "$attributes",
+		cnt: { $sum:1 }
+	}
+},{
+	$sort: {
+		cnt: -1
+	}
+},{
+	$limit: 10
+}])
+
+45
+db.yelpbusiness.aggregate([{
+	$match: {
+		state: "NV"
+	}
+},{
+	$unwind: "$attributes"
+},{
+	$group: {
+		_id: "$attributes",
+		cnt: { $sum:1 }
+	}
+},{
+	$sort: {
+		cnt: -1
+	}
+},{
+	$limit: 10
+}])
+
+46
+db.yelpbusiness.aggregate([{
+	$match: {
+		stars: 5,
+		is_open: 1
+	}
+},{
+	$group: {
+		_id: "$state",
+		cnt: { $sum:1 }
+	}
+},{
+	$sort: {
+		cnt: -1
+	}
+}])
+
+47
+db.yelpbusiness.aggregate([{
+	$unwind: "$categories"
+},{
+	$group: {
+		_id: "$categories",
+		pnt: { $avg: "$stars" }
+	}
+},{
+	$sort: {
+		pnt: -1
+	}
+},{
+	$limit: 5
+}])
+
+48
+db.yelpbusiness.aggregate([{
+	$group: {
+		_id: "$state",
+		city: { $addToSet: "$city" }
+	}
+}])
+
+49
+db.yelpbusiness.aggregate([{
+	$group: {
+		_id: {
+			state: "$state",
+			city: "$city"
+		},
+		nr: { $sum: "$review_count" }
+	}
+}])
+
+db.yelpbusiness.aggregate([{
+	$group: {
+		_id: {
+			state: "$state",
+			city: "$city"
+		},
+		nr: { $sum: "$review_count" }
+	}
+},{
+	$group: {
+		_id: {
+			state: "$_id.state"
+		},
+		cities: { $push: "$$ROOT" }
+	}
+}])
+
+50
+db.restaurants.aggregate([{
+	$unwind: "$grades"
+},{
+	$group: {
+		_id: {
+			borough: "$borough",
+			year: { $year: "$grades.date" }
+		},
+		score: { $avg: "$grades.score" }
+	}
+},{
+	$sort: {
+		"_id.borough": 1,
+		"_id.year": 1
+	}
+}])
+
+51
+db.restaurants.aggregate([{
+	$unwind: "$grades"
+},{
+	$match: {
+		"grades.grade": "A"
+	}
+},{
+	$group: {
+		_id: {
+			borough: "$borough",
+			year: { $year: "$grades.date" }
+		},
+		score: { $avg: "$grades.score" }
+	}
+},{
+	$sort: {
+		borough: 1,
+		year: 1
+	}
+}])
+
+52
+db.games.aggregate([{
+	$project: {
+		year: { $year: "$date" },
+		teams: 1
+	}
+},{
+	$match: {
+		year: 2010
+	}
+},{
+	$unwind: "$teams"
+},{
+	$group: {
+		_id: "$teams.name",
+		cnt: { $sum: "$teams.won" }
+	}
+},{
+	$sort: {
+		cnt: -1
+	}
+}])
+
+53
+db.games.aggregate([{
+	$unwind: "$box"
+},{
+	$unwind: "$box.players"
+},{
+	$group: {
+		_id: {
+			player: "$box.players.player",
+			year: { $year: "$date" }
+		},
+		pts: { $sum: "$box.players.pts" }
+	}
+},{
+	$sort: {
+		_id.year: 1,
+		pts: -1
+	}
+}])
+
+54
+db.games.aggregate([{
+	$unwind: "$box"
+},{
+	$unwind: "$box.players"
+},{
+	$group: {
+		_id: {
+			player: "$box.players.player",
+			year: { $year: "$date" }
+		},
+		pts: { $sum: "$box.players.pts" }
+	}
+},{
+	$sort: {
+		_id.year: 1,
+		pts: -1
+	}
+},{
+	$group: {
+		_id: "$_id.year",
+		topPlayer: { $first: "$_id.player" },
+		topPlayerPts: { $first: "$pts" }
+	}
+},{
+	$sort: {
+		_id: 1
+	}
+}])
+
+55
+db.games.aggregate([{
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $project: {
+        date: 1,
+        "box.players.player": 1,
+        pts: {
+            $add: [
+                "$box.players.ft",
+                { $multiply: ["$box.players.fg",2] },
+                { $multiply: ["$box.players.fg3",3] }
+            ]
+        }
+    }
+},{
+    $group: {
+        _id: {
+            year: { $year: "$date" },
+            player: "$box.players.player"
+        },
+        pts: {
+            $sum: "$pts"
+        }
+    }
+},{
+    $sort: {
+        "_id.year": 1,
+        "pts": -1
+    }
+},{
+    $group: {
+        _id: "$_id.year",
+        topPlayer: { $first: "$_id.player" },
+        topPlayerPts: { $first: "$pts" }
+    }
+},{
+    $sort: {
+        _id: 1
+    }
+}])
