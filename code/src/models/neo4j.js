@@ -1,6 +1,6 @@
 require('dotenv').config()
 const neo4j = require('neo4j-driver')
-const client = neo4j.driver("bolt://" + process.env.NEO4j_URL, neo4j.auth.basic(process.env.NEO4j_USER, process.env.NEO4j_PWD))
+const client = neo4j.driver("bolt://" + process.env.NEO4j_URL + ":" + process.env.NEO4j_PORT, neo4j.auth.basic(process.env.NEO4j_USER, process.env.NEO4j_PWD))
 let session = null
 
 async function connect() {
