@@ -33,3 +33,21 @@ services:
       - default
     depends_on:
       - mongodb
+
+  graphdb:
+    image: neo4j
+    hostname: graphdb
+    container_name: graphdb
+    volumes:
+      - ./neo4j/data:/datasets
+    expose:
+      - 7687
+      - 7474
+    ports:
+      - 7687:7687
+      - 7474:7474
+    networks:
+      - default
+    environment:
+    #  - NEO4J_AUTH=neo4j/fistic
+      - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
