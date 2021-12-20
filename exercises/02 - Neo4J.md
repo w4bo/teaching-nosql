@@ -15,7 +15,7 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
     RETURN numVertices, COUNT(e) AS numEdges
 
 3.	Dato il film The Departed (https://www.imdb.com/title/tt0407887/?ref_=fn_al_tt_1) inserire i seguenti nodi ed i seguenti archi; ATTENZIONE: creare tutte le istanze in un unico blocco! Altrimenti, le istruzioni per creare gli archi devono essere precedute da un MATCH per recuperare i rispettivi nodi coinvolti.
-    - L’istanza del film (proprietà: title, released)
+    - L'istanza del film (proprietà: title, released)
     - 3 attori principali (proprietà: name, born) 
     - Le rispettive relazioni ACTED_IN (proprietà: role)
     ```
@@ -48,14 +48,14 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
 
 ### Aggregazioni
 
-17.	Restituire l’età degli attori che hanno recitato nel film Apollo 13 (fare la differenza tra la release date del film e l’anno di nascita dell’attore)
+17.	Restituire l'età degli attori che hanno recitato nel film Apollo 13 (fare la differenza tra la release date del film e l'anno di nascita dell'attore)
     ```
     MATCH (m:Movie {title: 'Apollo 13'})<-[:ACTED_IN]-(p:Person) RETURN m, p, m.released-p.born AS eta
     MATCH (m:Movie {title: 'Apollo 13'})<-[:ACTED_IN]-(p:Person) RETURN m, p, date.truncate('year' date())-p.born AS eta
     ```
-18.	Calcolare l’età media degli attori che hanno recitato nel film Apollo 13
-19.	Calcolare l’età media degli attori per ogni film
-20.	Restituire la top-10 dei film con l’età media più bassa (usare le clausole order by e limit)
+18.	Calcolare l'età media degli attori che hanno recitato nel film Apollo 13
+19.	Calcolare l'età media degli attori per ogni film
+20.	Restituire la top-10 dei film con l'età media più bassa (usare le clausole order by e limit)
 
 ## Northwind
 21.	Restituire, per ogni prodotto (:Product), il numero di ordini ricevuti 

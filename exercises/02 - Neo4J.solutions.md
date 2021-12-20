@@ -26,7 +26,7 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
     CREATE (departed:Movie {title:'The Departed', released:2006, tagline:'Il bene e il male'})
     CREATE (leo:Person {name:'Leonardo Di Caprio', born: 1974})
     CREATE (matt:Person {name:'Matt Damon', born: 1970})
-    CREATE (jack:Person {name:'Jack Nicholson', born: 1937}) 
+    CREATE (jack:Person {name:'Jack Nicholson ', born: 1937}) 
     CREATE (leo)-[:ACTED_IN {roles: ['Billy']}]->(departed)
     CREATE (matt)-[:ACTED_IN {roles: ['Colin Sullivan']}]->(departed)
     CREATE (jack)-[:ACTED_IN {roles: ['Frank Costello']}]->(departed)
