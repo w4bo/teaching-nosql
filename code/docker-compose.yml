@@ -32,7 +32,8 @@ services:
     networks:
       - default
     depends_on:
-      - mongodb
+      mongodb:
+        condition: service_healthy
 
   graphdb:
     image: neo4j
@@ -51,6 +52,8 @@ services:
     environment:
       #  - NEO4J_AUTH=neo4j/fistic
       - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
+    depends_on:
+      - cassandra-load-keyspace
 
   cassandra:
     image: cassandra:3.11.2
