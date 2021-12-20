@@ -10,8 +10,8 @@ services:
       - 27017
       - 37017
     ports:
-      - 27017:27017
-      - 37017:37017
+      - "27017:27017"
+      - "37017:37017"
     # environment:
     #   MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
     #   MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PWD}
@@ -44,10 +44,37 @@ services:
       - 7687
       - 7474
     ports:
-      - 7687:7687
-      - 7474:7474
+      - "7687:7687"
+      - "7474:7474"
     networks:
       - default
     environment:
-    #  - NEO4J_AUTH=neo4j/fistic
+      #  - NEO4J_AUTH=neo4j/fistic
       - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
+
+  cassandra:
+    image: cassandra:3.11.2
+    container_name: cassandra
+    expose:
+      - 9042
+    ports:
+      - "9042:9042"
+    environment:
+      - "MAX_HEAP_SIZE=256M"
+      - "HEAP_NEWSIZE=128M"
+    restart: always
+    healthcheck:
+      test: [ "CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  cassandra-load-keyspace:
+    container_name: cassandra-load-keyspace
+    image: cassandra:3.11.2
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    volumes:
+      - ./cassandra/data/schema.cql:/schema.cql
+    command: /bin/bash -c "echo loading cassandra keyspace && cqlsh cassandra -f /schema.cql"
