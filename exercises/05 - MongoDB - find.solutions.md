@@ -152,7 +152,7 @@
     -> 1 array con 41 valori distinti
     ```
 
-23.	Visualizzare i valori distinti dell'array categories
+23.	Visualizzare i valori distinti dell’array categories
 
     ```
     db.yelpbusiness.distinct("categories")
@@ -241,14 +241,14 @@
     ```
     db.games.find({"teams": {"$elemMatch": {"home": true,"won": 0, score : {"$gte": 120}}}})
     ```
-37.	[Games] Visualizzare l'elenco distinto di date in cui una delle squadre ha totalizzato almeno 160 punti
+37.	[Games] Visualizzare l’elenco distinto di date in cui una delle squadre ha totalizzato almeno 160 punti
 
     ```
-    db.games.distinct( "date", { "teams": { "$elemMatch": { "score": {"$gte": 160} }}})
+    db.games.distinct( "date", { "teams": { "$elemMatch": { "score": {"$gte": 160}}}})
     ```
 
 38.	[Games] Visualizzare le partite in cui una delle due squadre ha sbagliato tutti i tiri liberi (box.team.ft=0) pur avendone provati almeno 2 (box.team.fta>=2)
 
     ```
-    db.games.find({ "box": {"$elemMatch": { "team.ft": 0, "team.fta": {"$gte": 2} } }})
+    db.games.find({ "box": {"$elemMatch": { "team.ft": 0, "team.fta": {"$gte": 2}}}})
     ```
