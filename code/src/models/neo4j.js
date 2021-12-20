@@ -20,6 +20,10 @@ function movie01() {
     return cypher("MATCH (n) RETURN n")
 }
 
+function movie05() {
+    return cypher("MATCH (n:Person)-->(:Movie) RETURN n")
+}
+
 async function cypher(cypherQuery) {
     return await session.run(cypherQuery);
 }
@@ -28,3 +32,4 @@ module.exports = {};
 module.exports.connect = connect;
 module.exports.disconnect = disconnect;
 module.exports.movie01 = movie01;
+module.exports.movie05 = movie05;
