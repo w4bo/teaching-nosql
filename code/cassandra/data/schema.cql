@@ -11,6 +11,6 @@ CREATE TABLE videos(
   PRIMARY KEY (video_id) 
 );
 
-COPY videos FROM '/videos.csv' WITH HEADER=true;
+COPY videos FROM '/data/videos.csv' WITH HEADER=true;
 
 SELECT * FROM videos;
