@@ -13,7 +13,7 @@ services:
     ports:
       - "3306:3306"
     healthcheck:
-      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 5s
       retries: 10
 
@@ -25,7 +25,7 @@ services:
         condition: service_healthy
     volumes:
       - ./mysql/data/foodmart.sql:/foodmart.sql
-    command: /bin/bash -c "mysql -u${MYSQL_USER} -p${MYSQL_PWD} < foodmart.sql"
+    command: /bin/bash -c "mysql -u${MYSQL_USER} -p${MYSQL_PWD} < /foodmart.sql"
 
   redis:
     image: redis
@@ -89,8 +89,6 @@ services:
     environment:
       - NEO4J_AUTH=neo4j/fitstic
       - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
-    depends_on:
-      - cassandra-seed
 
   cassandra:
     image: cassandra:3.11.2
@@ -104,7 +102,7 @@ services:
       - "HEAP_NEWSIZE=128M"
     restart: always
     healthcheck:
-      test: [ "CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces" ]
+      test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" , "-e describe keyspaces"]
       interval: 15s
       timeout: 10s
       retries: 10
