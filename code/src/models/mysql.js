@@ -3,17 +3,23 @@ const mysql = require('mysql');
 
 const client = mysql.createConnection({
     host: process.env.MYSQL_URL,
-    user: process.env.MYSQL_SER,
+    user: process.env.MYSQL_USER,
     password: process.env.MYSQL_PWD,
     database: 'foodmart'
 });
 
 async function mysql01() {
-    return query("select count(*) from customer");
+    return await query("select * from customer");
 }
 
 async function query(s) {
-    return client.query(s);
+    return new Promise((resolve, reject) => {
+        client.query(s, (err, rows) => {
+            if (err)
+                return reject(err);
+            resolve(rows);
+        });
+    });
 }
 
 async function connect() {
