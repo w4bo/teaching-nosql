@@ -6,7 +6,7 @@ beforeAll(async () => {
 
 test('mysql01', async () => {
     const data = await mysql.mysql01();
-    expect(data).toBeGreaterThan(0);
+    expect(data.length).toBeGreaterThan(0);
 });
 
 afterAll(async () => {
