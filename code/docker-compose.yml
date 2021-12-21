@@ -1,5 +1,32 @@
 version: "3.9"
 services:
+
+  mysql:
+    image: mysql
+    hostname: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_USER}
+      MYSQL_DATABASE: ${MYSQL_PWD}
+    expose:
+      - 3306
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 5s
+      retries: 10
+
+  mysql-seed:
+    container_name: mysql-seed
+    image: mysql
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./mysql/data/foodmart.sql:/foodmart.sql
+    command: /bin/bash -c "mysql -u${MYSQL_USER} -p${MYSQL_PWD} < foodmart.sql"
+
   redis:
     image: redis
     hostname: redis
@@ -63,7 +90,7 @@ services:
       - NEO4J_AUTH=neo4j/fitstic
       - NEO4J_ACCEPT_LICENSE_AGREEMENT=yes
     depends_on:
-      - cassandra-load-keyspace
+      - cassandra-seed
 
   cassandra:
     image: cassandra:3.11.2
@@ -82,12 +109,12 @@ services:
       timeout: 10s
       retries: 10
 
-  cassandra-load-keyspace:
-    container_name: cassandra-load-keyspace
+  cassandra-seed:
+    container_name: cassandra-seed
     image: cassandra:3.11.2
     depends_on:
       cassandra:
         condition: service_healthy
     volumes:
       - ./cassandra/data:/data
-    command: /bin/bash -c "echo loading cassandra keyspace && cqlsh cassandra -f /data/schema.cql"
+    command: /bin/bash -c "cqlsh cassandra -f /data/schema.cql"
