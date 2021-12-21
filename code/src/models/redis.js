@@ -1,7 +1,7 @@
 require('dotenv').config()
-import {createClient} from 'redis';
+const redis = require('redis');
 
-const client = createClient({
+const client = redis.createClient({
     url: 'redis://' + process.env.REDIS_URL + ":" + process.env.REDIS_PORT
 });
 
@@ -15,7 +15,7 @@ async function connect() {
 }
 
 async function disconnect() {
-    await client.shutdown()
+    await client.close()
 }
 
 module.exports = {};
