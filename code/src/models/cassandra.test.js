@@ -1,7 +1,7 @@
 const cassandra = require('./cassandra');
 
 beforeAll(async () => {
-    // await cassandra.connect();
+    await cassandra.connect();
 });
 
 test('killrvideo01', async () => {
@@ -10,5 +10,5 @@ test('killrvideo01', async () => {
 });
 
 afterAll(async () => {
-    // await cassandra.disconnect();
+    await cassandra.disconnect();
 });

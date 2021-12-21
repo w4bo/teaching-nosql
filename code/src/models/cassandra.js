@@ -16,5 +16,15 @@ async function query(s) {
     return await client.execute(s);
 }
 
+async function connect() {
+    await client.connect()
+}
+
+async function disconnect() {
+    await client.shutdown()
+}
+
 module.exports = {};
+module.exports.disconnect = disconnect;
+module.exports.connect = connect;
 module.exports.killrvideo01 = killrvideo01;
