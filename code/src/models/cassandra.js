@@ -3,7 +3,8 @@ const cassandra = require('cassandra-driver');
 
 const client = new cassandra.Client({
     contactPoints: [process.env.CASSANDRA_URL],
-    localDataCenter: 'datacenter1',
+    localDataCenter: process.env.CASSANDRA_DATACENTER,
+    keyspace: process.env.CASSANDRA_KEYSPACE,
     authProvider: new cassandra.auth.PlainTextAuthProvider(process.env.CASSANDRA_USER, process.env.CASSANDRA_PWD)
 });
 
