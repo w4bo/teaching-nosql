@@ -71,7 +71,6 @@ services:
 
   mongodb-seed:
     image: mongo
-    # build: ./mongodb
     hostname: mongodb-seed
     container_name: mongodb-seed
     networks:
