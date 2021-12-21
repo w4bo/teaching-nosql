@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-
+  # Image of the MySQL database
   mysql:
     image: mysql
     hostname: mysql
@@ -16,7 +16,7 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 5s
       retries: 10
-
+  # Populate the MySQL database when the database is ready (i.e., is healthy)
   mysql-seed:
     container_name: mysql-seed
     image: mysql
@@ -24,8 +24,8 @@ services:
       mysql:
         condition: service_healthy
     volumes:
-      - ./mysql/data/foodmart.sql:/foodmart.sql
-    command: /bin/bash -c "mysql -u${MYSQL_USER} -p${MYSQL_PWD} < /foodmart.sql"
+      - ./mysql/data/:/data
+    command: /bin/bash -c "mysql -u${MYSQL_USER} -p${MYSQL_PWD} < /data/foodmart.sql"
 
   redis:
     image: redis
@@ -64,8 +64,8 @@ services:
 
   mongodb-seed:
     build: ./mongodb
-    hostname: seed-mongodb
-    container_name: seed-mongodb
+    hostname: mongodb-seed
+    container_name: mongodb-seed
     networks:
       - default
     depends_on:
