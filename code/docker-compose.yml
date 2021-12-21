@@ -1,5 +1,12 @@
 version: "3.9"
 services:
+  redis:
+    image: redis
+    expose:
+      - 6379
+    ports:
+      - "6379:6379"
+
   mongodb:
     image: mongo
     hostname: mongodb
