@@ -113,6 +113,8 @@ services:
     environment:
       - "MAX_HEAP_SIZE=256M"
       - "HEAP_NEWSIZE=128M"
+    volumes:
+      - ./cassandra/data:/data
     restart: always
     healthcheck:
       test: [ "CMD", "cqlsh", "-u cassandra", "-p cassandra" , "-e describe keyspaces" ]
