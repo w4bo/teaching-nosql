@@ -12,5 +12,5 @@ docker-compose up --build -d
 ./wait-for-it.sh ${CASSANDRA_URL}:${CASSANDRA_PORT} --strict --timeout=10 -- echo "Cassandra is up"
 ./wait-for-it.sh ${REDIS_URL}:${REDIS_PORT} --strict --timeout=10 -- echo "Redis is up"
 sleep 20
-docker exec graphdb bash -c "cypher-shell -u ${NEO4J_USER} -p ${NEO4J_PWD} -f /datasets/movies.cypher"
+docker exec neo4j bash -c "cypher-shell -u ${NEO4J_USER} -p ${NEO4J_PWD} -f /datasets/movies.cypher"
 npm test -- --detectOpenHandles
