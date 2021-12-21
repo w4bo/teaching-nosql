@@ -15,7 +15,7 @@ async function connect() {
 }
 
 async function disconnect() {
-    await client.close()
+    await client.disconnect()
 }
 
 module.exports = {};

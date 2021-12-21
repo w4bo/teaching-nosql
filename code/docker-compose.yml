@@ -45,10 +45,10 @@ services:
       mongodb:
         condition: service_healthy
 
-  graphdb:
+  neo4j:
     image: neo4j
-    hostname: graphdb
-    container_name: graphdb
+    hostname: neo4j
+    container_name: neo4j
     volumes:
       - ./neo4j/data:/datasets
     expose:
