@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306"
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       timeout: 5s
       retries: 10
     networks:
@@ -70,7 +70,8 @@ services:
       driver: "none"
 
   mongodb-seed:
-    build: ./mongodb
+    image: mongo
+    # build: ./mongodb
     hostname: mongodb-seed
     container_name: mongodb-seed
     networks:
@@ -78,6 +79,12 @@ services:
     depends_on:
       mongodb:
         condition: service_healthy
+    volumes:
+      - ./mongodb/data/:/data
+    command: /bin/bash -c "mongoimport  --host=mongodb -d exercises -c foo --file=/data/foo.json --jsonArray && 
+                           mongorestore --host=mongodb -d exercises -c restaurants /data/restaurants.bson && 
+                           mongorestore --host=mongodb -d exercises -c games /data/games.bson && 
+                           mongorestore --host=mongodb -d exercises -c yelp-business /data/yelp-business.bson"
 
   neo4j:
     image: neo4j
@@ -109,7 +116,7 @@ services:
       - "HEAP_NEWSIZE=128M"
     restart: always
     healthcheck:
-      test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" , "-e describe keyspaces"]
+      test: [ "CMD", "cqlsh", "-u cassandra", "-p cassandra" , "-e describe keyspaces" ]
       interval: 15s
       timeout: 10s
       retries: 10
