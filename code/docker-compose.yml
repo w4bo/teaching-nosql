@@ -80,10 +80,10 @@ services:
         condition: service_healthy
     volumes:
       - ./mongodb/data/:/data
-    command: /bin/bash -c "mongoimport  --host=mongodb -d exercises -c foo --file=/data/foo.json --jsonArray && 
-                           mongorestore --host=mongodb -d exercises -c restaurants /data/restaurants.bson && 
-                           mongorestore --host=mongodb -d exercises -c games /data/games.bson && 
-                           mongorestore --host=mongodb -d exercises -c yelp-business /data/yelp-business.bson"
+    command: /bin/bash -c "mongoimport  --host=mongodb -d exercises -c foo --file=/data/foo.json --jsonArray &&
+      mongorestore --host=mongodb -d exercises -c restaurants /data/restaurants.bson &&
+      mongorestore --host=mongodb -d exercises -c games /data/games.bson &&
+      mongorestore --host=mongodb -d exercises -c yelp-business /data/yelp-business.bson"
 
   neo4j:
     image: neo4j
@@ -114,7 +114,7 @@ services:
       - "MAX_HEAP_SIZE=256M"
       - "HEAP_NEWSIZE=128M"
     volumes:
-      - ./cassandra/data:/data
+      - ./cassandra/data:/root/labwork/
     restart: always
     healthcheck:
       test: [ "CMD", "cqlsh", "-u cassandra", "-p cassandra" , "-e describe keyspaces" ]
