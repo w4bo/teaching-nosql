@@ -26,3 +26,8 @@ Dataset MongoDB in allegato
 - Lecture 08: Test Neo4J + MongoDB Find
 - Lecture 09: MongoDB Find / Aggregate
 - Lecture 10: Test MongoDB + Redis + Real datasets
+
+## To ask
+
+Neo4J lab:
+- 12 e 13 mi danno lo stesso risultato. E' un problema?
