@@ -7,6 +7,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
+      - name: Dummy KV DB
+        run: |
+          ls
+          cd code/kv_bash
+          source kv.sh
+          kset foo bar
+          kget foo
+          kget bar
       - name: Build Images
         run: |
           cd code
@@ -24,10 +32,3 @@ jobs:
           ./build.sh
           ./start.sh
           ./stop.sh
-      - name: Dummy KV DB
-        run: |
-          cd kv_bash
-          source kv.sh
-          kset foo bar
-          kget foo
-          kget bar
