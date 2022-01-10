@@ -7,6 +7,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
+      - name: Check versions
+        run: |
+          node --version
+          npm --version 
       - name: Dummy KV DB
         run: |
           ls
