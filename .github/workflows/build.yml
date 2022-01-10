@@ -24,3 +24,10 @@ jobs:
           ./build.sh
           ./start.sh
           ./stop.sh
+      - name: Dummy KV DB
+        run: |
+          cd kv_bash
+          source kv.sh
+          kset foo bar
+          kget foo
+          kget bar
