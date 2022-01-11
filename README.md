@@ -13,11 +13,16 @@ NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, a
 - Install `docker-compose`
     - Windows and Mac: Docker Compose is already included in Docker Desktop
     - Linux: https://docs.docker.com/compose/install/
-- Run docker (sometimes docker has to be restarted)
-    - Check that docker works by opening a terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `docker run hello-world`
-- Install NodeJS (tested with versions 16.13.1 and 17.3.0)
+- Run docker (sometimes docker has to be (re)started over and over again)
+    - Windows
+        - Double click on Docker Desktop from the Windows Desktop
+        - This warning will pop up, DO NOT close it, but click on the link!
+        - Download the WSL kernel from here
+        - Click on restart
+- Check that docker works by opening a *new* terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `docker run hello-world`
+- Install NodeJS (tested with versions 16.13.2 and 17.3.0)
     - https://nodejs.org/en/download/
-    - Check that NodeJS works by opening a terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `node --version` (e.g., the output should be `v17.3.0`)
+    - Check that NodeJS works by opening a *new* terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `node --version` (e.g., the output should be `v17.3.0`)
 - Install Robo 3T (not Studio 3T): https://robomongo.org/download
 
 ### [Deprecated] Setting up the old software stack
