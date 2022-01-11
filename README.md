@@ -16,9 +16,9 @@ NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, a
 - Run docker (sometimes docker has to be (re)started over and over again)
     - Windows
         - Double click on Docker Desktop from the Windows Desktop
-        - This warning will pop up, DO NOT close it, but click on the link!
-        - Download the WSL kernel from here
-        - Click on restart
+        - This warning will pop up, DO NOT close it, but click on the link! ![/imgs/win-docker1.jpg](/imgs/win-docker1.jpg)
+        - Download the WSL kernel from here ![/imgs/win-docker2.jpg](/imgs/win-docker2.jpg)
+        - Click on restart ![/imgs/win-docker3.jpg](/imgs/win-docker3.jpg)
 - Check that docker works by opening a *new* terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `docker run hello-world`
 - Install NodeJS (tested with versions 16.13.2 and 17.3.0)
     - https://nodejs.org/en/download/
