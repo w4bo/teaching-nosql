@@ -4,15 +4,32 @@
 
 NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, and columnar databases.
 
-## Setting up the software stack
+## Install
+
+- Install `docker`
+    - Windows: https://docs.docker.com/desktop/windows/install/
+    - Mac: https://docs.docker.com/desktop/mac/install/
+    - Linux: https://docs.docker.com/engine/install/ubuntu/
+- Install `docker-compose`
+    - Windows and Mac: Docker Compose is already included in Docker Desktop
+    - Linux: https://docs.docker.com/compose/install/
+- Run docker (sometimes docker has to be restarted)
+    - Check that docker works by opening a terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `docker run hello-world`
+- Install NodeJS (tested with versions 16.13.1 and 17.3.0)
+    - https://nodejs.org/en/download/
+    - Check that NodeJS works by opening a terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `node --version` (e.g., the output should be `v17.3.0`)
+- Install Robo 3T (not Studio 3T): https://robomongo.org/download
+
+### [Deprecated] Setting up the old software stack
+
+This is the old way. Use docker instead.
 
 - Cassandra: https://s3.amazonaws.com/datastaxtraining/VM/DS220-vm-Jul2015.zip
 - Neo4j: https://neo4j.com/artifact.php?name=neo4j-desktop-offline-1.3.11-setup.exe
 - MongoDB: https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-4.4.3-signed.msi
-	- Robo3T (workbench di MongoDB): https://download.studio3t.com/robomongo/windows/robo3t-1.4.2-windows-x86_64-8650949.exe
-	- MongoDB Database Tools (import/export di MongoDB): https://fastdl.mongodb.org/tools/db/mongodb-database-tools-windows-x86_64-100.3.0.zip
-
-Dataset MongoDB in allegato
+    - Robo3T (workbench di MongoDB): https://download.studio3t.com/robomongo/windows/robo3t-1.4.2-windows-x86_64-8650949.exe
+    - MongoDB Database Tools (import/export di MongoDB): https://fastdl.mongodb.org/tools/db/mongodb-database-tools-windows-x86_64-100.3.0.zip
+    - Dataset MongoDB in allegato
 
 ## Calendar
 
