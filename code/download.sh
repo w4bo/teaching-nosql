@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-cd code
 cd mongodb/data
 wget http://big.csr.unibo.it/projects/nosql-datasets/games.bson -q
 wget http://big.csr.unibo.it/projects/nosql-datasets/restaurants.bson -q
