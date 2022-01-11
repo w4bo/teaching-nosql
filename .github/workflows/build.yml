@@ -21,6 +21,7 @@ jobs:
           kget bar
       - name: Build Images
         run: |
+          cd code
           chmod +x *.sh
           ./download.sh
           ./build.sh
