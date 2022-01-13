@@ -4,7 +4,7 @@ jobs:
   launch-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
       - name: Check versions
         run: |
           node --version
