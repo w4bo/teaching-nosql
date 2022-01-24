@@ -28,6 +28,22 @@ NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, a
     - Check that NodeJS works by opening a *new* terminal (`cmd.exe` in Windows or `/bin/bash` in Linux) and running `node --version` (e.g., the output should be `v17.3.0`)
 - Install Robo 3T (not Studio 3T): https://robomongo.org/download
 
+## Running the software
+
+Windows, open a new terminal and run the following commands:
+
+    copy .env.example .env
+    build.bat
+    download.bat
+    start.bat
+
+Linux, open a new terminal and run the following commands:
+
+    copy .env.example .env
+    build.sh
+    download.sh
+    start.sh
+
 ### [Deprecated] Setting up the old software stack
 
 This is the old way. Use docker instead.
