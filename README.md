@@ -39,7 +39,7 @@ Windows, open a new terminal and run the following commands:
 
 Linux, open a new terminal and run the following commands:
 
-    copy .env.example .env
+    cp .env.example .env
     build.sh
     download.sh
     start.sh
