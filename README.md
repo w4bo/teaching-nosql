@@ -40,9 +40,9 @@ Windows, open a new terminal and run the following commands:
 Linux, open a new terminal and run the following commands:
 
     cp .env.example .env
-    build.sh
-    download.sh
-    start.sh
+    sh build.sh
+    sh download.sh
+    sh start.sh
 
 ### [Deprecated] Setting up the old software stack
 
