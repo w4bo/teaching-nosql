@@ -1,10 +1,5 @@
 # NoSQL in Action!
 
-TODO:
-- Aggiornare readme.md con errore di windows
-- Verificare la chiusura anomala
-- Aggiungere wait prima di chiusura automatica e screenshot per verificare il funzionamento
-
 [![build](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml)
 
 NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, and columnar databases.
