@@ -1,5 +1,10 @@
 # NoSQL in Action!
 
+TODO:
+- Aggiornare readme.md con errore di windows
+- Verificare la chiusura anomala
+- Aggiungere wait prima di chiusura automatica e screenshot per verificare il funzionamento
+
 [![build](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/nodejs-nosql/actions/workflows/build.yml)
 
 NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, and columnar databases.
@@ -30,7 +35,9 @@ NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, a
 
 ## Running the software
 
-Windows, open a new terminal and run the following commands:
+### Windows
+
+Open a new terminal and run the following commands:
 
     cd code
     copy .env.example .env
@@ -38,9 +45,21 @@ Windows, open a new terminal and run the following commands:
     download.bat
     start.bat
 
-Linux, open a new terminal and run the following commands:
+- If Windows complains about running the scripts, click on "Ulteriori Informazioni"
 
-    cd code/
+    ![/imgs/win-docker4.png](imgs/win-docker4.png)
+- and then
+
+    ![/imgs/win-docker5.png](imgs/win-docker5.png)
+- If everything runs well, the result should be something like:
+
+    ![/imgs/docker-success.png](imgs/docker-success.png)
+
+### Linux
+
+Open a new terminal and run the following commands:
+
+    cd code
     cp .env.example .env
     sh build.sh
     sh download.sh
