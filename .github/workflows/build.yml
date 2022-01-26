@@ -20,6 +20,7 @@ jobs:
       - name: Build Images
         run: |
           cd code
+          cp .env.example .env
           chmod +x *.sh
           ./download.sh
           ./build.sh
