@@ -5,8 +5,8 @@ beforeAll(async () => {
 });
 
 test('killrvideo01', async () => {
-    const data = await cassandra.killrvideo01();
-    expect(data.rowLength).toBeGreaterThan(0); //
+    const data = await cassandra.query("select * from videos");
+    expect(data.rowLength).toBeGreaterThan(0);
 });
 
 afterAll(async () => {
