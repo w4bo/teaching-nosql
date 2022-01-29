@@ -9,8 +9,8 @@ config.plugins.push(
     }],
     ["@semantic-release/github", {
         "assets": [
-          {"path": "slides/", "label": "Slides"},
-          {"path": "exercises/", "label": "DB exercises"}
+          {"path": "slides.zip"} // , "label": "Slides",
+          // {"path": "exercises/", "label": "DB exercises"}
         ]
     }],
     "@semantic-release/git",
