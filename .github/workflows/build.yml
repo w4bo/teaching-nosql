@@ -40,7 +40,7 @@ jobs:
           ./download.sh
           ./start.sh
           ./stop.sh
-  semver:
+  release:
     needs:
       - build
     if: github.event_name == 'push'

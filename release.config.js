@@ -7,7 +7,12 @@ config.plugins.push(
     ["@semantic-release/exec", {
         "publishCmd": publishCmd,
     }],
-    "@semantic-release/github",
+    ["@semantic-release/github", {
+        "assets": [
+          {"path": "slides/", "label": "Slides"},
+          {"path": "exercises/", "label": "DB exercises"}
+        ]
+    }],
     "@semantic-release/git",
 )
 module.exports = config
