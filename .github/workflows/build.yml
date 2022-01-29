@@ -48,6 +48,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
+      - name: ZIP build
+        run: zip -r slides.zip slides
       - name: release
         run: |
           npm install
