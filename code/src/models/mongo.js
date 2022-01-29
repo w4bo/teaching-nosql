@@ -11,6 +11,7 @@ async function connect() {
         await client.connect();
         db = client.db("exercises")
         db.restaurants = db.collection("restaurants")
+        return db
     } catch (e) {
         console.error(e);
     }
@@ -28,4 +29,3 @@ module.exports = {};
 module.exports.connect = connect;
 module.exports.disconnect = disconnect;
 module.exports.getResult = getResult;
-module.exports.db = db;

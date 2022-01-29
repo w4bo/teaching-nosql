@@ -2,8 +2,7 @@ const mongo = require('./mongo');
 let db
 
 beforeAll(async () => {
-    await mongo.connect();
-    db = mongo.db
+    db = await mongo.connect();
 });
 
 function restaurants01() {

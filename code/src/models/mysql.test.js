@@ -5,7 +5,7 @@ beforeAll(async () => {
 });
 
 async function mysql01() {
-    return await query("select * from customer");
+    return await mysql.query("select * from customer");
 }
 
 test('mysql01', async () => {
