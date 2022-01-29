@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/w4bo/teaching-nosql/compare/1.0.0...1.0.1) (2022-01-29)
+
+
+### Bug Fixes
+
+* add release ([c650fb8](https://github.com/w4bo/teaching-nosql/commit/c650fb8d0b24603eaf0ff1e47d92b58f7c1360dd))
+
 ## 1.0.0 (2022-01-29)
 
 
