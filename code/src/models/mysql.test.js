@@ -4,8 +4,12 @@ beforeAll(async () => {
     await mysql.connect();
 });
 
+async function mysql01() {
+    return await mysql.query("select * from customer");
+}
+
 test('mysql01', async () => {
-    const data = await mysql.mysql01();
+    const data = await mysql01();
     expect(data.length).toBeGreaterThan(0);
 });
 
