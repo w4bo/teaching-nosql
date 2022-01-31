@@ -14,12 +14,12 @@
 - Creare una tabella `videos` per  memorizzare i video  con le colonne indicate
 
       CREATE TABLE videos( 
-        video_id TIMEUUID, 
-        added_date TIMESTAMP,
-        description TEXT, 
-        title TEXT, 
-        user_id uuid,
-        PRIMARY KEY (video_id) 
+            video_id TIMEUUID, 
+            added_date TIMESTAMP,
+            description TEXT, 
+            title TEXT, 
+            user_id uuid,
+            PRIMARY KEY (video_id) 
       );
 
 - Caricare dati nella tabella. Fare riferimento al file `/root/labwork/exercise-2/videos.csv`
@@ -42,16 +42,16 @@
 
 ### Exercise 2
 
-- Creare una nuova tabella `videos_by_title_year` per  memorizzare video con una  chiave composta. E' buona pratica dare alle tabelle un nome  che rispecchi il modo di interrogarle
+- Creare una nuova tabella `videos_by_title_year` per memorizzare video con una  chiave composta. E' buona pratica dare alle tabelle un nome  che rispecchi il modo di interrogarle
 
       CREATE TABLE videos_by_title_year(  
-        title TEXT, 
-        added_year int,
-        added_date TIMESTAMP,
-        description TEXT,
-        user_id uuid,
-        video_id TIMEUUID,
-        PRIMARY KEY ((title, added_year)) 
+            title TEXT, 
+            added_year int,
+            added_date TIMESTAMP,
+            description TEXT,
+            user_id uuid,
+            video_id TIMEUUID,
+            PRIMARY KEY ((title, added_year)) 
       );
 
 - Caricare dati nella tabella. Fare riferimento al file `/root/labwork/exercise-3/videos_by_title_year.csv`
@@ -86,14 +86,14 @@
   - ATTENZIONE: un video può essere associate a tanti tag
 
         CREATE TABLE videos_by_tag_year(  
-          tag TEXT, 
-          added_year int,
-          added_date TIMESTAMP,
-          title TEXT, 
-          description TEXT,
-          user_id uuid,
-          video_id TIMEUUID,
-          PRIMARY KEY ((tag), added_year, video_id) 
+            tag TEXT, 
+            added_year int,
+            added_date TIMESTAMP,
+            title TEXT, 
+            description TEXT,
+            user_id uuid,
+            video_id TIMEUUID,
+            PRIMARY KEY ((tag), added_year, video_id) 
         ) WITH CLUSTERING ORDER BY (added_year DESC);
 
 - Caricare dati nella tabella. Fare riferimento al file `/root/labwork/exercise-4/videos_by_tag_year.csv`
@@ -140,7 +140,7 @@
 
 - Ripopolare `videos` caricando i dati che comprendono i tag. Fare riferimento al file `/root/labwork/exercise-5/videos_encoding.csv`
 
-    COPY videos FROM '/root/labwork/exercise-5/videos.csv' WITH HEADER=true;
+      COPY videos FROM '/root/labwork/exercise-5/videos.csv' WITH HEADER=true;
 
 - Estendere `videos` con una colonna una colonna `video_encoding` di tipo UDT e così composta
 
@@ -152,10 +152,10 @@
   | width      | int       |
 
       CREATE TYPE video_encoding ( 
-        bit_rates SET<TEXT>, 
-        encoding text, 
-        height int, 
-        width int
+            bit_rates SET<TEXT>, 
+            encoding text, 
+            height int, 
+            width int
       ); 
 
       ALTER TABLE videos ADD encoding FROZEN<video_encoding>;
@@ -178,10 +178,10 @@
 - Creare una tabella `videos_count_by_tag` con un contatore che conteggi il numero di video a cui è assegnato un determinato tag
 
       CREATE TABLE videos_count_by_tag(  
-        tag TEXT, 
-        added_year int,
-        video_count COUNTER,
-        PRIMARY KEY ((tag), added_year) 
+            tag TEXT, 
+            added_year int,
+            video_count COUNTER,
+            PRIMARY KEY ((tag), added_year) 
       );
 
 - Eseguire lo script `/root/labwork/exercise-6/videos_count_by_tag.cql`
@@ -216,8 +216,8 @@
 ### Exercise 6
 
 - Modulare la relazione tra video e attori, considerate due query
-  - Q1: restituire i video in cui compareun dato attore (a partire dal più recente)
-  - Q2: restituire i video di un datogenere (a partire dal più recente)
+  - Q1: restituire i video in cui compare un dato attore (a partire dal più recente)
+  - Q2: restituire i video di un dato genere (a partire dal più recente)
   - Video 
 
     | Column name | Data type |
@@ -239,16 +239,16 @@
     |genre|text|
 
         CREATE TABLE videos_by_actor ( 
-          actor text, 
-          added_date timestamp,
-          video_id timeuuid,  
-          character_name text,
-          description text,
-          encoding frozen<video_encoding>,
-          tags set<text>, 
-          title text, 
-          user_id uuid,
-          PRIMARY KEY ((actor), added_date, video_id, character_name) 
+            actor text, 
+            added_date timestamp,
+            video_id timeuuid,  
+            character_name text,
+            description text,
+            encoding frozen<video_encoding>,
+            tags set<text>, 
+            title text, 
+            user_id uuid,
+            PRIMARY KEY ((actor), added_date, video_id, character_name) 
         ) WITH CLUSTERING ORDER BY (added_date DESC, video_id ASC, character_name ASC);
 
         COPY videos_by_actor 
@@ -264,15 +264,15 @@
         WHERE actor = 'Tom Hanks';
 
         CREATE TABLE videos_by_genre ( 
-          genre text, 
-          added_date timestamp,
-          video_id timeuuid, 
-          description text,
-          encoding frozen<video_encoding>,
-          tags set<text>, 
-          title text, 
-          user_id uuid,
-          PRIMARY KEY ((genre), added_date, video_id) 
+            genre text, 
+            added_date timestamp,
+            video_id timeuuid, 
+            description text,
+            encoding frozen<video_encoding>,
+            tags set<text>, 
+            title text, 
+            user_id uuid,
+            PRIMARY KEY ((genre), added_date, video_id) 
         ) WITH CLUSTERING ORDER BY (added_date DESC, video_id ASC);
 
         COPY videos_by_genre 
