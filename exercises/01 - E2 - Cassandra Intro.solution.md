@@ -70,9 +70,13 @@
 
 - Cercare video solo per nome o solo per anno
 
-    SELECT * 
-    FROM videos_by_title_year 
-    WHERE added_year = 2015; 
+      SELECT * 
+      FROM videos_by_title_year 
+      WHERE title = 'Sleepy Grumpy Cat'; 
+
+      SELECT * 
+      FROM videos_by_title_year 
+      WHERE added_year = 2015; 
 
 
 ### Exercise 3
