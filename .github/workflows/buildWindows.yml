@@ -12,8 +12,8 @@ jobs:
       - name: Build Images
         run: |
           cd code
-          init.bat    
-          download.bat
-          build.bat
-          start.bat
-          stop.bat
+          .\init.bat    
+          .\download.bat
+          .\build.bat
+          .\start.bat
+          .\stop.bat
