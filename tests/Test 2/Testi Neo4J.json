@@ -1,0 +1,45 @@
+Restituire le coppie di utenti che hanno acquistato almeno due prodotti in comune.
+
+(tutte giuste)
+
+	-- OPZIONE 1
+	MATCH 
+		(u1:Utente)-[:ACQUISTA]->(p1:Prodotto), 
+		(u1)-[:ACQUISTA]->(p2:Prodotto), 
+		(u2:Utente)-[:ACQUISTA]->(p1), 
+		(u2)-[:ACQUISTA]->(p2) 
+	RETURN u1,u2
+
+	-- OPZIONE 2
+	MATCH 
+		(u1:Utente)-[:ACQUISTA]->(p1:Prodotto), 
+		(p1)<-[:ACQUISTA]-(u2:Utente)-[:ACQUISTA]->(p2), 
+		(p2:Prodotto)<-[:ACQUISTA]-(u2) 
+	RETURN u1,u2
+
+	-- OPZIONE 3
+	MATCH 
+		(u1:Utente)-[:ACQUISTA]->(p1:Prodotto)<-[:ACQUISTA]-(u2:Utente),
+		(u2)-[:ACQUISTA]->(p2:Prodotto)<-[:ACQUISTA]-(u1) 
+	RETURN u1,u2
+
+	-- OPZIONE 4
+	MATCH 
+		(p1:Prodotto)<-[:ACQUISTA]-(u1:Utente)-[:ACQUISTA]->(p2:Prodotto),
+		(p1)<-[:ACQUISTA]-(u2:Utente)-[:ACQUISTA]->(p2) 
+	RETURN u1,u2
+
+
+Cosa restituisce la query seguente?
+MATCH (u1:Utente {nome:'Alice'})-[:CONOSCE]->(u2:Utente), (u1)-[:ACQUISTA]->(:Prodotto)<-[:ACQUISTA]-(u2)-[:ACQUISTA]->(p:Prodotto) RETURN p
+
+I prodotti acquistati da Alice
+I prodotti acquistati da Alice, ad esclusione di quelli che lei ha già comprato
+I prodotti acquistati da Alice e dai suoi amici
+I prodotti acquistati da Alice e dai suoi amici, ad esclusione di quelli che lei ha già comprato
+I prodotti acquistati dagli amici di Alice
+I prodotti acquistati dagli amici di Alice, ad esclusione di quelli che lei ha già comprato
+I prodotti acquistati dagli amici di Alice che hanno acquistato i suoi stessi prodotti
+I prodotti acquistati dagli amici di Alice che hanno acquistato i suoi stessi prodotti, ad esclusione di quelli che lei ha già comprato
+(giusta) I prodotti acquistati dagli amici di Alice che hanno acquistato almeno un prodotto in comune con lei
+I prodotti acquistati dagli amici di Alice che hanno acquistato almeno un prodotto in comune con lei, ad esclusione di quelli che lei ha già comprato

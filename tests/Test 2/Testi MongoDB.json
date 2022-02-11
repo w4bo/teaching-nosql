@@ -1,0 +1,144 @@
+Collezione games. Visualizzare le partite vinte (won) dai Los Angeles Lakers (teams.name) nell'anno 2000 (date). 
+
+	GIUSTA
+	# OPZIONE 1
+	db.getCollection('games').find({
+		"teams": {
+			"$elemMatch": {
+				"name": "Los Angeles Lakers",
+				"won":1
+			}
+		},
+		"date": {
+			"$gte": new Date("2000-01-01"), 
+			"$lt": new Date("2001-01-01"), 
+		}
+	})
+
+	# OPZIONE 2
+	db.getCollection('games').find({
+		"teams": {
+			"name": "Los Angeles Lakers",
+			"won":1
+		},
+		"date": {
+			"$gte": new Date("2000-01-01"), 
+			"$lt": new Date("2001-01-01"), 
+		}
+	})
+
+	# OPZIONE 3
+	db.getCollection('games').find({
+		"teams.name": "Los Angeles Lakers",
+		"teams.won":1,
+		"date": {
+			"$gte": new Date("2000-01-01"), 
+			"$lt": new Date("2001-01-01"), 
+		}
+	})
+
+	# OPZIONE 4
+	db.getCollection('games').find({
+		"teams.name": "Los Angeles Lakers",
+		"teams.won":1,
+		"date": {
+			"$gte": "2000-01-01", 
+			"$lt": "2001-01-01", 
+		}
+	})
+
+Collezione restaurants. Individuare i ristoranti che si trovano nel Queens (borough), escludendo quelli in cui il tipo di cucina (cuisine) è Other; ordinare i risultati per zipcode decrescente.
+
+	GIUSTA
+	# OPZIONE 1
+	db.getCollection('restaurants').find({
+		"borough": "Queens",
+		"cuisine": {
+			"$ne": "Other"
+		}
+	})
+	.sort({"address.zipcode": -1})
+
+	# OPZIONE 2
+	db.getCollection('restaurants').find({
+		"borough": "Queens",
+		"cuisine": {
+			"$ne": "Other"
+		}
+	})
+	.sort({"address.zipcode": 1})
+
+	GIUSTA
+	# OPZIONE 3
+	db.getCollection('restaurants').find({
+		"borough": "Queens",
+		"cuisine": {
+			"$not": { $in: ["Other"] }
+		}
+	})
+	.sort({"address.zipcode": -1})
+
+	# OPZIONE 4
+	db.getCollection('restaurants').find({
+		"borough": "Queens",
+		"cuisine": {
+			"$not": { $in: ["Other"] }
+		}
+	})
+	.sort({"address.zipcode": -1})
+
+Collezione yelpbusiness. Restituire i business che fanno sia Mexican che Fast Food (categories) e per cui vale una delle due condizioni seguenti: o hanno ricevuto più di 300 recensioni (review_count), o hanno ricevuto un punteggio (stars) uguale a 5.
+
+	GIUSTA
+	# OPZIONE 1
+	db.yelpbusiness.find({	
+		categories: { 
+			$all: ["Mexican", "Fast Food"] 
+		}, 
+		$or: [
+			{ review_count: { $gte: 300 } },
+			{ stars: { $gte: 5 } }
+		] 
+	})
+
+	GIUSTA
+	# OPZIONE 2
+	db.yelpbusiness.find({
+		$and: [{ 
+			categories: { 
+				$all: ["Mexican", "Fast Food"] 
+			}
+		},{ 
+			$or: [{ 
+				review_count: { $gte: 300 } 
+			},{ 
+				stars: { $gte: 5 } 
+			}] 
+		}] 
+	})
+
+	# OPZIONE 3
+	db.yelpbusiness.find({	
+		categories: { 
+			$in: ["Mexican", "Fast Food"] 
+		}, 
+		$or: [
+			{ review_count: { $gte: 300 } },
+			{ stars: { $gte: 5 } }
+		] 
+	})
+
+	# OPZIONE 4
+	db.yelpbusiness.find({
+		$and: [{ 
+			categories: { 
+				$in: ["Mexican", "Fast Food"] 
+			}
+		},{ 
+			$or: [{ 
+				review_count: { $gte: 300 } 
+			},{ 
+				stars: { $gte: 5 } 
+			}] 
+		}] 
+	})

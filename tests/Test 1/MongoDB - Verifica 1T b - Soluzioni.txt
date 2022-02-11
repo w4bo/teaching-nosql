@@ -1,0 +1,128 @@
+B1
+
+
+
+B2 - Ordinare i tipi di cucina di Manhattan per punteggio medio (grades.score).
+
+db.restaurants.aggregate({
+    $match: {
+        borough: "Manhattan"
+    }   
+},{
+    $unwind: "$grades"
+},{
+    $group: {
+        _id: "$cuisine",
+        pm: { $avg: "$grades.score" }
+    }
+},{
+    $sort: {
+        pm: -1
+    }
+})
+
+BBBB - Restituire, per ogni business, il nome del business ed un campo “consigliato” che indichi true se il business è aperto, ha un punteggio >=4 con almeno 20 recensioni, false altrimenti.
+
+db.yelpbusiness.aggregate({
+    $project: {
+        "name": 1,
+        "is_open": 1,
+        "stars": 1,
+        "review_count": 1,
+        "consigliato": {
+            $cond: [
+                {$and:[
+                    {$gte: ["$stars",4]},
+                    {$gte: ["$review_count",20]},
+                    {$eq: ["$is_open",1]}
+                ]},
+                true,
+                false
+            ]
+        }
+    }
+})
+
+BBBB - Restituire i 3 giocatori che hanno segnato il maggior numero di tiri da 3 (fg3).
+
+db.games.aggregate({
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $group: {
+        _id: "$box.players.player",
+        n3: { $sum: "$box.players.fg3" }
+    }
+},{
+    $sort: {
+        n3: -1
+    }
+},{
+    $limit: 3
+})
+
+---------------------------------------------------------------------------------------------------
+
+CCCC - Restituire, per ogni grade, un campo "anno" che indichi l'anno del voto e un campo "giudizio" che indichi: “Il ristorante XX ha ricevuto un voto YY” dove:
+•	XX sono i primi 20 caratteri del nome del ristorante;
+•	YY è grades.grade.
+
+db.restaurants.aggregate({
+    $unwind: "$grades"
+},{
+    $project: {
+        "anno": { $year: "$grades.date" },
+        "giudizio": {
+            $concat: [
+                "Il ristorante ",
+                "$name", -- SUBSTRING
+                " ha ricevuto un voto ",
+                "$grades.grade"
+            ]
+        }
+    }
+})
+
+CCCC - Restituire le 5 categorie in Arizona (AZ) che hanno il punteggio medio più elevato.
+
+db.yelpbusiness.aggregate([{
+    $match: {
+        "state": "AZ"
+    }
+},{
+    $unwind: "$categories"
+},{
+    $group: {
+        _id: "$categories",
+        pm: { $avg: "$stars" }
+    }
+},{
+    $sort: {
+        pm: -1
+    }
+},{
+    $limit: 5
+}])
+
+CCCC - Ordinare le squadre per numero di partite vinte nel 2010.
+
+db.games.aggregate([{
+    $match: {
+        "date": {
+            $gte: new Date("2010-01-01"),
+            $lte: new Date("2010-12-31")
+        }
+    }
+},{
+    $unwind: "$teams"
+},{
+    $group: {
+        _id: "$teams.name",
+        nw: { $sum: "$teams.won" }
+    }
+},{
+    $sort: {
+        nw: -1
+    }
+}])

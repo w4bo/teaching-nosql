@@ -1,0 +1,73 @@
+A1 -
+
+db.restaurants.find({"borough":"Bronx"}, {"_id":0, "name": 1})
+
+A2 - Restituire i 10 ristoranti di tipo Irish che hanno il punteggio medio (grades.score) più basso.
+
+db.restaurants.aggregate([{
+    $match: {
+        cuisine: "Irish"
+    }   
+},{
+    $unwind: "$grades"
+},{
+    $group: {
+        _id: "$name",
+        pm: { $avg: "$grades.score" }
+    }
+},{
+    $sort: {
+        pm: 1
+    }
+},{
+    $limit: 10
+}])
+
+A3 - 
+
+db.yelpbusiness.find({attributes:{$in: ["BusinessAcceptsBitcoin: False", "BusinessAcceptcCreditCards: True"]}})
+
+A4 - Ordinare gli stati per totale di recensioni ricevute nei ristoranti aperti.
+
+db.yelpbusiness.aggregate([{
+    $match: {
+        is_open: 1
+    }   
+},{
+    $group: {
+        _id: "$state",
+        nr: { $sum: "$review_count" }
+    }
+},{
+    $sort: {
+        nr: -1
+    }
+}])
+
+A5 - 
+
+db.games.find({"teams.score": {"$gte": 140}})
+
+A6 - Restituire, per ogni giocatore in ogni partita, un campo “punti totali” calcolato sommando:
+•	I tiri liberi (ft)
+•	I tiri da 2 (fg moltiplicato per 2)
+•	I tiri da 3 (fg3 moltiplicato per 3)
+
+db.games.aggregate({
+    $unwind: "$box"
+},{
+    $unwind: "$box.players"
+},{
+    $project: {
+        "box.players.ft": 1,
+        "box.players.fg": 1,
+        "box.players.fg3": 1,
+        "punti totali": {
+            $add: [
+                { $multiply: [ "$box.players.ft", 1 ] },
+                { $multiply: [ "$box.players.fg", 2 ] },
+                { $multiply: [ "$box.players.fg3", 3 ] }
+            ]
+        }
+    }
+})
