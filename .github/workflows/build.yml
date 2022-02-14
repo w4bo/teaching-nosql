@@ -3,7 +3,6 @@ name: "Build"
 on:
   push:
     tags: '*'
-    branches: '**'
     # branches-ignore:
     #   - 'autodelivery**'
     #   - 'bump-**'
@@ -36,9 +35,6 @@ jobs:
         run: |
           cd code
           chmod +x *.sh
-          ./init.sh
-          ./build.sh
-          ./download.sh
           ./start.sh
           ./stop.sh
   release:
