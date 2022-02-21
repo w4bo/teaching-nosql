@@ -16,7 +16,7 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
 
     ```
     MATCH (n) WITH COUNT(n) AS numVertices
-    MATCH (a)-[e]->(b)
+    MATCH ()-[e]->()
     RETURN numVertices, COUNT(e) AS numEdges
     ```
 
