@@ -16,7 +16,7 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
 
     ```
     MATCH (n) WITH COUNT(n) AS numVertices
-    MATCH ()-[e]->()
+    MATCH (a)-[e]->(b)
     RETURN numVertices, COUNT(e) AS numEdges
     ```
 
@@ -156,8 +156,8 @@ Il codice crea:
 
 ## Northwind
 
-See: https://neo4j.com/developer/example-data/#demo-server
-Access Northwind: https://demo.neo4jlabs.com:7473/browser/?dbms=neo4j://northwind@demo.neo4jlabs.com&db=northwind
+- See: https://neo4j.com/developer/example-data/#demo-server
+- Access Northwind: https://demo.neo4jlabs.com:7473/browser/?dbms=neo4j://northwind@demo.neo4jlabs.com&db=northwind
 
 21. Restituire, per ogni prodotto (:Product), il numero di ordini ricevuti 
 

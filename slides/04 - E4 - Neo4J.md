@@ -62,8 +62,8 @@ Manuale Cypher https://neo4j.com/docs/cypher-manual/current/
 
 ## Northwind
 
-See: https://neo4j.com/developer/example-data/#demo-server
-Access Northwind: https://demo.neo4jlabs.com:7473/browser/?dbms=neo4j://northwind@demo.neo4jlabs.com&db=northwind
+- See: https://neo4j.com/developer/example-data/#demo-server
+- Access Northwind: https://demo.neo4jlabs.com:7473/browser/?dbms=neo4j://northwind@demo.neo4jlabs.com&db=northwind
 
 21. Restituire, per ogni prodotto (:Product), il numero di ordini ricevuti 
 22. Restituire, per il cliente (:Customer) con contactName Francisco Chang, i prodotti ordinati da altri clienti che hanno acquistato un prodotto acquistato in comune
