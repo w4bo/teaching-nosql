@@ -1,3 +1,47 @@
+### [1.0.12](https://github.com/w4bo/teaching-nosql/compare/1.0.11...1.0.12) (2022-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v4.4.1 ([40f8c5a](https://github.com/w4bo/teaching-nosql/commit/40f8c5aa87fc544218c85b71998c87ec30aa3a79))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3 ([95de0e7](https://github.com/w4bo/teaching-nosql/commit/95de0e761eb4d73eae93334df003045c141dffae))
+* **deps:** update actions/setup-node action to v3 ([bbc8284](https://github.com/w4bo/teaching-nosql/commit/bbc82847989ab118ccd40ec67e0ce67acf4a10b4))
+
+### [1.0.11](https://github.com/w4bo/teaching-nosql/compare/1.0.10...1.0.11) (2022-03-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v4.4.0 ([5468021](https://github.com/w4bo/teaching-nosql/commit/5468021eaada4a12c09910f4fe6c1846e7ea4a90))
+
+### [1.0.10](https://github.com/w4bo/teaching-nosql/compare/1.0.9...1.0.10) (2022-03-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v4.0.4 ([9f91a95](https://github.com/w4bo/teaching-nosql/commit/9f91a95ba88b1a2c7f889f88ebcd80f910193ac0))
+
+### [1.0.9](https://github.com/w4bo/teaching-nosql/compare/1.0.8...1.0.9) (2022-02-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v4.4.3 ([c6a4738](https://github.com/w4bo/teaching-nosql/commit/c6a473862a5d7e5dc044242487c8c7921cc9d9bf))
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.0.2 ([bac11f1](https://github.com/w4bo/teaching-nosql/commit/bac11f150f1f68c3a6e1679ad015131251489af1))
+* **deps:** update dependency cassandra to v4.0.3 ([4e4ed08](https://github.com/w4bo/teaching-nosql/commit/4e4ed085440db90fcaae9cafe6b735c64187e4fd))
+* **deps:** update dependency jest to v27.5.0 ([4152a07](https://github.com/w4bo/teaching-nosql/commit/4152a078b367c4937ce341b30b3163f85d5b466b))
+* **deps:** update dependency jest to v27.5.1 ([ce2694f](https://github.com/w4bo/teaching-nosql/commit/ce2694fc2f5a2ddeab80d422ed8ea4047df5197b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.5 ([d924d1d](https://github.com/w4bo/teaching-nosql/commit/d924d1d4091d112318bb3b884090e0a8617c793e))
+* **deps:** update node.js to 16.14 ([8be27af](https://github.com/w4bo/teaching-nosql/commit/8be27af3f28f338ee9f1573b114b1b8782338e07))
+
 ### [1.0.8](https://github.com/w4bo/teaching-nosql/compare/1.0.7...1.0.8) (2022-02-03)
 
 
