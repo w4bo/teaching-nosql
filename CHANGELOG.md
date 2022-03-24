@@ -1,3 +1,10 @@
+### [1.0.14](https://github.com/w4bo/teaching-nosql/compare/1.0.13...1.0.14) (2022-03-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v4.4.5 ([b229624](https://github.com/w4bo/teaching-nosql/commit/b229624bd1e8c9eab3d4a52cee9e11784c4a282c))
+
 ### [1.0.13](https://github.com/w4bo/teaching-nosql/compare/1.0.12...1.0.13) (2022-03-18)
 
 
