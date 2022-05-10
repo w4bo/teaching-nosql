@@ -1,3 +1,27 @@
+### [1.0.17](https://github.com/w4bo/teaching-nosql/compare/1.0.16...1.0.17) (2022-05-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.0.1 ([3cbbe96](https://github.com/w4bo/teaching-nosql/commit/3cbbe9681830b7be546bd4c8e6e65a7d5e349126))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.0.1 ([7cc60f5](https://github.com/w4bo/teaching-nosql/commit/7cc60f5d418efce4f5d954f8754d5f8bf4cb782a))
+* **deps:** update actions/checkout action to v3.0.2 ([9945d02](https://github.com/w4bo/teaching-nosql/commit/9945d02b1f414bde48a8e8dd1521197e02e2e776))
+* **deps:** update actions/setup-node action to v3.1.1 ([d610f06](https://github.com/w4bo/teaching-nosql/commit/d610f066038f626d3155514fdd21e8fff3f4f7e7))
+
+
+### Dependency updates
+
+* **deps:** update dependency jest to v28 ([b81276e](https://github.com/w4bo/teaching-nosql/commit/b81276e79dcd68dd7fb3ebe46264196d62dceacf))
+* **deps:** update dependency jest to v28.0.1 ([0c7a0df](https://github.com/w4bo/teaching-nosql/commit/0c7a0df66b8633cf132aa265612e1adcdb95baf5))
+* **deps:** update dependency jest to v28.0.2 ([1d9c11b](https://github.com/w4bo/teaching-nosql/commit/1d9c11bb853e3e8028862c7e2319bc2b7a280bb9))
+* **deps:** update dependency redis to v7 ([2e84b2c](https://github.com/w4bo/teaching-nosql/commit/2e84b2c72e9de871ce63215b750bbd3373bff1db))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.6 ([13f031e](https://github.com/w4bo/teaching-nosql/commit/13f031e69d59ea13c0e17d7abd44f727711c8510))
+* **deps:** update node.js to 16.15 ([bdbd28d](https://github.com/w4bo/teaching-nosql/commit/bdbd28d7ab3cb0acff3dc42964b5ff16360969b8))
+
 ### [1.0.16](https://github.com/w4bo/teaching-nosql/compare/1.0.15...1.0.16) (2022-04-05)
 
 
