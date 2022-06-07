@@ -1,3 +1,22 @@
+## [1.0.20](https://github.com/w4bo/teaching-nosql/compare/1.0.19...1.0.20) (2022-06-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v4.7.0 ([d30cffc](https://github.com/w4bo/teaching-nosql/commit/d30cffc6f1dda2142e408a35f28e96d36c121d8b))
+
+
+### Dependency updates
+
+* **deps:** update dependency cassandra to v4.0.4 ([08a295b](https://github.com/w4bo/teaching-nosql/commit/08a295b3283a4f4d9c7c80fed7b189a323ad8c77))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.7 ([1eaca75](https://github.com/w4bo/teaching-nosql/commit/1eaca75f04c13cd92952732c1bf75956049786bb))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v3.2.0 ([01bf4af](https://github.com/w4bo/teaching-nosql/commit/01bf4af8be61396a25e22683767903f1cb8301bf))
+* **deps:** update actions/setup-node action to v3.3.0 ([c782853](https://github.com/w4bo/teaching-nosql/commit/c7828534a2cd392508d8c3b22309c8c7c316ba54))
+
 ### [1.0.19](https://github.com/w4bo/teaching-nosql/compare/1.0.18...1.0.19) (2022-05-11)
 
 
