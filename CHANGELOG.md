@@ -1,3 +1,16 @@
+## [1.0.21](https://github.com/w4bo/teaching-nosql/compare/1.0.20...1.0.21) (2022-06-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v4.4.6 ([045397c](https://github.com/w4bo/teaching-nosql/commit/045397c9df64b7348f2e3af911e2ba6597df2f24))
+
+
+### Dependency updates
+
+* **deps:** update dependency jest to v28.1.1 ([6e1c892](https://github.com/w4bo/teaching-nosql/commit/6e1c8922a487832546a68c24b9d45e4e1516267e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.8 ([1fbec71](https://github.com/w4bo/teaching-nosql/commit/1fbec719100b082ff1afa12f4e9380a8267a932e))
+
 ## [1.0.20](https://github.com/w4bo/teaching-nosql/compare/1.0.19...1.0.20) (2022-06-07)
 
 
