@@ -1,3 +1,19 @@
+## [1.0.22](https://github.com/w4bo/teaching-nosql/compare/1.0.21...1.0.22) (2022-12-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cassandra-driver to v4.6.4 ([209d630](https://github.com/w4bo/teaching-nosql/commit/209d63096c3e8e9de79fa3b6a25ba2d4d3672af0))
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.0.7 ([290a9eb](https://github.com/w4bo/teaching-nosql/commit/290a9eb1de18d74e18854341d1c989f415095d7c))
+* **deps:** update dependency jest to v28.1.2 ([5e978e9](https://github.com/w4bo/teaching-nosql/commit/5e978e9a8aa7202b496633cb494bf277f07b19c8))
+* **deps:** update dependency jest to v28.1.3 ([3dbb15d](https://github.com/w4bo/teaching-nosql/commit/3dbb15d7c95d1b68d0c0da6cdcf702eb96be7b92))
+* **deps:** update dependency mysql to v8 ([1684862](https://github.com/w4bo/teaching-nosql/commit/1684862bf5ff10a5058d0926f08fac9f9f3220b9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.15 ([ddfa0ea](https://github.com/w4bo/teaching-nosql/commit/ddfa0ea58b77c35921a911e4288723a037ed452a))
+
 ## [1.0.21](https://github.com/w4bo/teaching-nosql/compare/1.0.20...1.0.21) (2022-06-18)
 
 
