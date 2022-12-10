@@ -1,3 +1,18 @@
+## [1.0.28](https://github.com/w4bo/teaching-nosql/compare/1.0.27...1.0.28) (2022-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v5 ([dbd3541](https://github.com/w4bo/teaching-nosql/commit/dbd354164a95a1ea216fd8475b0e61dc8434bd82))
+
+
+### Dependency updates
+
+* **deps:** update dependency jest to v29 ([73dd256](https://github.com/w4bo/teaching-nosql/commit/73dd2566e4115e0a3cc0bcfc26506efee3ef8477))
+* **deps:** update mongo docker tag to v6 ([5358a7e](https://github.com/w4bo/teaching-nosql/commit/5358a7eb3f1677bdfef9cf4ba374e1f1d3b3cadc))
+* **deps:** update neo4j docker tag to v5 ([57ce56e](https://github.com/w4bo/teaching-nosql/commit/57ce56eab734b896f04cf0fda17d738667fec2d1))
+* **deps:** update node.js to v18 ([487a2b7](https://github.com/w4bo/teaching-nosql/commit/487a2b7c53a01dd3aa72c3730be3dfc782a5942c))
+
 ## [1.0.27](https://github.com/w4bo/teaching-nosql/compare/1.0.26...1.0.27) (2022-12-10)
 
 
