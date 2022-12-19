@@ -1,3 +1,20 @@
+## [1.0.29](https://github.com/w4bo/teaching-nosql/compare/1.0.28...1.0.29) (2022-12-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v4.13.0 ([6752d31](https://github.com/w4bo/teaching-nosql/commit/6752d312e73c1f4a3b612c13be94c0614473f9e3))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.2.0 ([77a4024](https://github.com/w4bo/teaching-nosql/commit/77a402460a4f34a312492809f90374589bc338c4))
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.0 ([7ff4f0f](https://github.com/w4bo/teaching-nosql/commit/7ff4f0f8fbdeb945b72a8fb268d597eaa387b865))
+
 ## [1.0.28](https://github.com/w4bo/teaching-nosql/compare/1.0.27...1.0.28) (2022-12-10)
 
 
