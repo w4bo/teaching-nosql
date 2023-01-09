@@ -1,3 +1,22 @@
+## [1.0.30](https://github.com/w4bo/teaching-nosql/compare/1.0.29...1.0.30) (2023-01-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v5.4.0 ([89b19ff](https://github.com/w4bo/teaching-nosql/commit/89b19ff1d1614637278deef0afa6cdb255b67127))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.3.0 ([390e271](https://github.com/w4bo/teaching-nosql/commit/390e271188d0f1c79123a93ced5f83f26cc6e4b9))
+* **deps:** update actions/setup-node action to v3.6.0 ([4eefef9](https://github.com/w4bo/teaching-nosql/commit/4eefef9657e6dc587fedd8baccf9f76be94e7fa5))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.16 ([9dfd159](https://github.com/w4bo/teaching-nosql/commit/9dfd1591551a505c68642a0206fd71d792510af5))
+* **deps:** update node.js to 18.13 ([5c635ee](https://github.com/w4bo/teaching-nosql/commit/5c635eec44a10f2ca1e64464aef52c44ed6b5191))
+
 ## [1.0.29](https://github.com/w4bo/teaching-nosql/compare/1.0.28...1.0.29) (2022-12-19)
 
 
