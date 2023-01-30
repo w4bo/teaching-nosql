@@ -1,3 +1,4 @@
+call git pull
 call .\build.bat
 call .\download.bat
 
