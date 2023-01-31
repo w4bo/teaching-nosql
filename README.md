@@ -61,7 +61,7 @@ If Windows complains about:
 
 ## (Tentative) Calendar
 - Lecture 01 (4h): Introduction to NoSQL databases
-- Lecture 02 (4h): Cassandra
+- Lecture 02 (4h): Introduction to NoSQL databases and software installation, Cassandra
 - Lecture 03 (4h): Test teoria, Cassandra
 - Lecture 04 (4h): Cassandra, Neo4J
 - Lecture 05 (4h): Test Cassandra, Neo4J
