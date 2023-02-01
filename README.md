@@ -3,17 +3,14 @@
 NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, and columnar databases.
 
 ## Install
-- Click Start and type `powershell`
-- Right-click Windows Powershell and choose ``Run as Administrator''
-- Paste the following command into Powershell and press enter.
-    > Set-ExecutionPolicy Bypass -Scope Process -Force; `
-        iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-- Answer "Yes" when prompted
-- Wait for the process to finish and close the PowerShell
-- Reopen the power shell as adminstrator and run the following command:
-    > choco install -y docker docker-desktop git nodejs robo3t
-- Wait for the process to finish and restart the pc (if the process is locked sometimes press enter)
-- Accept docker term of use and wait it starts
+- What we need?
+    - Docker
+    - NodeJS
+    - Robo3t
+    - Git
+- How to install?
+    - [Quick installation (only for Windows)](instructions/QuickInstall.md).
+    - [Other way (also for Mac and Linux)](instructions/OtherInstall.md)
 - Check all is installed:
     - `docker`: 
         - by opening "Docker Desktop" (search it in start, if is not already opened)
@@ -27,19 +24,38 @@ NoSQL (Not Only SQL) exercises against relational, key-value, document, graph, a
         > git --version
 
         (e.g., the output should be v2.38)
-- Run from a new terminal (cmd.exe in Windows)
+- Run from a new terminal (cmd.exe in Windows and Terminal in Mac/Linux)
     >   
         cd Documents 
         git clone https://github.com/ChiaraFor96/fitstic-nosql-2023.git
 - All the files will be in the folder Documents\fitstic-nosql-2023
 
 ## Running the software and download slides
+- __***REMEMBER***: do not change (modify or delete) files in the directory "fitstic-nosql-2023"__, just copy a file changing the name for have your own version.
 
-- Open a new terminal and run the following commands:
-    >
-        cd Documents\fitstic-nosql-2023 (replace it with the actual path)
-        cd code
-        start.bat
+- Open a new terminal (cmd.exe in Windows and Terminal in Mac/Linux) and run the following commands:
+    - Windows
+        >
+            cd Documents\fitstic-nosql-2023
+            cd code
+            .\start.bat
+    - Linux / Mac
+        > 
+            cd Documents/fitstic-nosql-2023
+            cd code
+            sh start.sh
+    
+    __In both cases when you launch "start" script you can specify the name of the databases for reduce the number of executed processes.__
+    - Cassandra:
+        - .\start.bat cassandra cassandra-seed
+    - Mongo:
+        - .\start.bat mongodb mongodb-seed
+    - Neo4J:
+        - .\start.bat neo4j
+    - Redis:
+        - .\start.bat redis
+    
+    (for Linux/Max write "sh start.sh" instead of ".\start.bat")
 
 
 If Windows complains about:
@@ -59,8 +75,10 @@ If Windows complains about:
 
     ![/imgs/docker-success.png](imgs/docker-success.png)
 
+    - If some database is not up, because we start only some of them the test of the started databases must PASS, the others not.
+
 ## (Tentative) Calendar
-- Lecture 01 (4h): Introduction to NoSQL databases
+- Lecture 01 (4h): Introduction to NoSQL databases (until slide 48) and start software installation
 - Lecture 02 (4h): Introduction to NoSQL databases and software installation, Cassandra
 - Lecture 03 (4h): Test teoria, Cassandra
 - Lecture 04 (4h): Cassandra, Neo4J

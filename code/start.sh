@@ -17,7 +17,7 @@ sudo docker volume rm $(docker volume ls -qf dangling=true)
 
 set -e
 sudo docker-compose down
-sudo docker-compose up --build -d --remove-orphans
+sudo docker-compose up --build -d --remove-orphans $*
 ./wait-for-it.sh ${MONGO_URL}:${MONGO_PORT} --strict --timeout=10 -- echo "MongoDB is up"
 ./wait-for-it.sh ${NEO4J_URL}:${NEO4J_PORT} --strict --timeout=10 -- echo "Neo4J is up"
 ./wait-for-it.sh ${CASSANDRA_URL}:${CASSANDRA_PORT} --strict --timeout=10 -- echo "Cassandra is up"
