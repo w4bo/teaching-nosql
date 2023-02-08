@@ -1,3 +1,16 @@
+## [1.0.38](https://github.com/w4bo/teaching-nosql/compare/1.0.37...1.0.38) (2023-02-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v5.0.1 ([05184a1](https://github.com/w4bo/teaching-nosql/commit/05184a183b74642968f53b1fc80e49c7964ea0d4))
+
+
+### Dependency updates
+
+* **deps:** update dependency jest to v29.4.2 ([25468d9](https://github.com/w4bo/teaching-nosql/commit/25468d9a3d05f84748f56631f1e7df2739f3eef9))
+* **deps:** update node.js to 18.14 ([b7e25f7](https://github.com/w4bo/teaching-nosql/commit/b7e25f7ca10e0a3e3508be09263f109342adf25b))
+
 ## [1.0.37](https://github.com/w4bo/teaching-nosql/compare/1.0.36...1.0.37) (2023-02-01)
 
 
