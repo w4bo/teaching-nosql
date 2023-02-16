@@ -151,7 +151,7 @@ Il codice crea:
 20. Restituire la top-10 dei film con l'età media più bassa (usare le clausole order by e limit)
 
     ```
-    MATCH (m:Movie)<-[:ACTED_IN]-(p:Person) RETURN m, AVG(m.released-p.born) as av ORDER BY av DESC LIMIT 10
+    MATCH (m:Movie)<-[:ACTED_IN]-(p:Person) RETURN m, AVG(m.released-p.born) as av ORDER BY av ASC LIMIT 10
     ```
 
 ## Northwind
