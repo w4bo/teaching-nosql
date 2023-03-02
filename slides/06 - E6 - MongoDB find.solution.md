@@ -103,7 +103,7 @@
 
     ```
     db.yelpbusiness.find({categories: ["Grocery", "Food"]})
-
+    db.yelpbusiness.find({categories: {$all: ["Grocery", "Food"], $size: 2}})
     db.yelpbusiness.find({"categories": {"$size": 2}, "categories": ["Grocery", "Food"]})
     ```
 
