@@ -99,7 +99,7 @@
     db.yelpbusiness.find({categories: {$in: ["Grocery", "Food"]}})
     ```
 
-16. Visualizzare tutti i business che hanno SOLAMENTE Grocery E Food tra le categorie //TODO cambia con and
+16. Visualizzare tutti i business che hanno SOLAMENTE Grocery E Food tra le categorie
 
     ```
     db.yelpbusiness.find({categories: ["Grocery", "Food"]})
