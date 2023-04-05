@@ -1,3 +1,28 @@
+## [1.0.42](https://github.com/w4bo/teaching-nosql/compare/1.0.41...1.0.42) (2023-04-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v5.2.0 ([8a8e963](https://github.com/w4bo/teaching-nosql/commit/8a8e9631516f025738622c3b146de701af182290))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.4.0 ([8fa3115](https://github.com/w4bo/teaching-nosql/commit/8fa31157bcdeb144982ab8ebb23792bf653310d0))
+* **deps:** update actions/checkout action to v3.5.0 ([3fa0cfd](https://github.com/w4bo/teaching-nosql/commit/3fa0cfde57ea17f255ccae580e3ebbdb8af46fd2))
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.1 ([bb7dc86](https://github.com/w4bo/teaching-nosql/commit/bb7dc868f1710b0b3b9df2b39cd02d21026c847e))
+* **deps:** update dependency jest to v29.5.0 ([dfcb719](https://github.com/w4bo/teaching-nosql/commit/dfcb71991b3cccd7674cb8ffecd042e420fe60f6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.17 ([f81dddf](https://github.com/w4bo/teaching-nosql/commit/f81dddf2707df6a7d6c3500af608ab884f5dfd11))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.19 ([c607a1c](https://github.com/w4bo/teaching-nosql/commit/c607a1ce8639612d596855d6d9c5878a7abc2697))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.21 ([8adae15](https://github.com/w4bo/teaching-nosql/commit/8adae155293114ce7de5e6a38e50c5dcb2fd0b98))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.22 ([d15fa13](https://github.com/w4bo/teaching-nosql/commit/d15fa1378138ec0f986cbfc8af105d23bdf67bd6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.23 ([4421132](https://github.com/w4bo/teaching-nosql/commit/44211328770d0cc9db6cd9ea39463836e5949665))
+* **deps:** update node.js to 18.15 ([fc85e8f](https://github.com/w4bo/teaching-nosql/commit/fc85e8f7e05a0be079c376581b17957ca98b7329))
+
 ## [1.0.41](https://github.com/w4bo/teaching-nosql/compare/1.0.40...1.0.41) (2023-02-25)
 
 
