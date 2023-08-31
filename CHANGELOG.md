@@ -1,3 +1,10 @@
+## [1.0.48](https://github.com/w4bo/teaching-nosql/compare/1.0.47...1.0.48) (2023-08-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v5.8.0 [security] ([a961a84](https://github.com/w4bo/teaching-nosql/commit/a961a848abdca8a8e3da8eed5676989f8d18dda2))
+
 ## [1.0.47](https://github.com/w4bo/teaching-nosql/compare/1.0.46...1.0.47) (2023-08-31)
 
 
