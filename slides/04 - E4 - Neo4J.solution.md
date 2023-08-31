@@ -115,17 +115,13 @@ Il codice crea:
 15. Restituire, per ogni revisore, tutti i revisori seguiti direttamente o indirettamente attraverso un altro revisore
 
     ```
-    MATCH (p:Person)-[:FOLLOWS*1..2]->(p2:Person) RETURN p, p2
-
-    MATCH (m:Movie)<-[:REVIEWED]-(r1)-[:FOLLOWS*1..2]->(r2)-[:REVIEWED]->(:Movie) RETURN m, r1, r2
-
-    NO: MATCH (p:Person)-[:FOLLOWS]->(p1:Person)-[:FOLLOWS]->(p2:Person) RETURN p, p2
+    MATCH (:Movie)<-[:REVIEWED]-(p1:Person)<-[:FOLLOWS*1..2]-(p:Person)-[:REVIEWED]->(:Movie)RETURN p1, p
     ```
 
 16. Restituire i 12 nodi raggiungibili con un massimo di 3 salti (in qualunque direzione) a partire da Clint Eastwood
 
     ```
-    MATCH (p:Person {name: 'Clint Eastwood'})-[*..3]-(m) RETURN p, m
+    MATCH (p:Person {name: 'Clint Eastwood'})-[*..3]-(m) RETURN m
     ```
 
 ### Aggregazioni
@@ -151,8 +147,9 @@ Il codice crea:
 20. Restituire la top-10 dei film con l'età media più bassa (usare le clausole order by e limit)
 
     ```
-    MATCH (m:Movie)<-[:ACTED_IN]-(p:Person) RETURN m, AVG(m.released-p.born) as av ORDER BY av DESC LIMIT 10
+    MATCH (m:Movie)<-[:ACTED_IN]-(p:Person) RETURN m, AVG(m.released-p.born) as av ORDER BY av ASC LIMIT 10
     ```
+    (ASC, potevamo ometterlo)
 
 ## Northwind
 
@@ -174,11 +171,21 @@ Il codice crea:
 23. Restituire, per il prodotto con productName Mascarpone Fabioli, i 3 prodotti più ordinati insieme ad esso
 
     ```
-    MATCH (p:Product {productName: 'Mascarpone Fabioli'})--(:Order)--(p2:Product) WHERE p<>p2 RETURN p2, COUNT (*) AS c ORDER BY c DESC LIMIT 3
+    MATCH (p:Product {productName: 'Mascarpone Fabioli'})<--(:Order)-->(p2:Product) WHERE p<>p2 RETURN p2, COUNT (*) AS c ORDER BY c DESC LIMIT 3
     ```
 
 24. Restituire le 4 coppie di prodotti più ordinati insieme in assoluto
 
     ```
-    MATCH (p:Product)--(:Order)--(p2:Product) WHERE p<>p2 RETURN p, p2, COUNT(*) AS c ORDER BY c DESC LIMIT 4
+    MATCH (p:Product)<--(:Order)-->(p2:Product) WHERE p<>p2 RETURN p, p2, COUNT(*) AS c ORDER BY c DESC LIMIT 4
+    ```
+
+    Per non restituire due volte la stessa coppia:
+    ```
+    MATCH (p:Product)<--(o:Order)-->(p1:Product)
+    WHERE p1 <> p 
+    AND p1.productID < p.productID
+    RETURN p1, p, count(o) as n
+    ORDER BY n DESC
+    LIMIT 4
     ```

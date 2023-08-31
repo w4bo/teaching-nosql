@@ -68,7 +68,7 @@
       AND added_year = 2015; 
 
 
-- Cercare video solo per nome o solo per anno
+- Cercare video solo per nome o solo per anno (non funziona, vedremo perchè nelle prossime slide)
 
       SELECT * 
       FROM videos_by_title_year 
@@ -294,7 +294,7 @@
 - Popolare le tabelle
 
       USE killr_video;
-      COPY videos FROM '/root/labwork/exercise-16/videos.csv' WITH HEADER=true;
+      COPY videos FROM '/root/labwork/exercise-16/videos.csv' WITH HEADER=true AND MINBATCHSIZE=1 AND MAXBATCHSIZE=1 AND PAGESIZE=10; -- per evitare errore PicklingError
       COPY latest_videos FROM '/root/labwork/exercise-16/latest_videos.csv' WITH HEADER=true;
       COPY trailers_by_video FROM '/root/labwork/exercise-16/trailers_by_video.csv' WITH HEADER=true;
       COPY actors_by_video FROM '/root/labwork/exercise-16/actors_by_video.csv' WITH HEADER=true;

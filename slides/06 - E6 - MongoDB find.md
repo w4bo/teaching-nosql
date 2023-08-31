@@ -85,7 +85,7 @@
 
 34. [Restaurants] Visualizzare i ristoranti che hanno ricevuto almeno un punteggio (grades.score) maggiore di 10 nel 2014
 
-35. [Yelpbusiness] Contare i business di categoria Yoga che hanno ricevuto almeno 4 di punteggio (stars) e che sono aperti (is_open=1)
+35. [Yelpbusiness] Visualizzare i business di categoria Yoga che hanno ricevuto almeno 4 di punteggio (stars) e che sono aperti (is_open=1)
 
 36. [Games] Visualizzare le partite in cui la squadra di casa ha perso pur totalizzando più di 120 punti
 

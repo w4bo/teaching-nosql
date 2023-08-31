@@ -47,14 +47,16 @@
 8. Visualizzare i ristoranti il cui tipo di cucina è tra Hamburgers, Bakery o Irish 
 
     ```
-    db.restaurants.find({cuisine: {$in: ["Hamburgers", "Bakery", "Irish"]})
-    db.restaurants.find({$or: [{cuisine: "Hamburgers"}, {cuisine: "Bakery"}]})
+    db.restaurants.find({cuisine: { $in: ["Hamburgers", "Bakery", "Irish"] }})
+    
+    db.restaurants.find({$or: [{cuisine: "Hamburgers"}, {cuisine: "Bakery"}, {cuisine: "Irish"}]})
     ```
 
 9. Visualizzare i ristoranti il cui tipo di cucina NON è tra Hamburgers, Bakery o Irish 
 
     ```
-    db.restaurants.find({cuisine: {$nin: ["Hamburgers", "Bakery", "Irish"]}}
+    db.restaurants.find({cuisine: {$nin: ["Hamburgers", "Bakery", "Irish"]}})
+    
     db.restaurants.find({cuisine: {$not: {$in: ["Hamburgers", "Bakery", "Irish"]}}})
     ```
 
@@ -69,74 +71,66 @@
 
     ```
     db.yelpbusiness.find({review_count: {$gte: 10}, state: {$in: ["NV","AZ"]}})
-    -> 37113 risultati
     ```
 
 12. Visualizzare tutti i business che hanno ricevuto almeno 10 recensioni (review_count) O si trovano in Arizona o in Nevada (state = NV o AZ) 
 
     ```
     db.yelpbusiness.find({$or: [{review_count: {$gte: 10}}, {state: {$in: ["NV","AZ"]}}]})
-    -> 79898 risultati
     ```
 
 13. Visualizzare tutti i business che hanno Grocery tra le categorie 
 
     ```
     db.yelpbusiness.find({categories: "Grocery"})
+    
     db.yelpbusiness.find({categories: {$in: ["Grocery"]}})
-    -> 2850 risultati
     ```
 
 14. Visualizzare tutti i business che hanno Grocery E Food tra le categorie 
 
     ```
     db.yelpbusiness.find({categories: {$all: ["Grocery", "Food"]}})
-    -> 4 risultati
     ```
 
 15. Visualizzare tutti i business che hanno Grocery O Food tra le categorie 
 
     ```
     db.yelpbusiness.find({categories: {$in: ["Grocery", "Food"]}})
-    -> 4125 risultati
     ```
 
-16. Visualizzare tutti i business che hanno SOLAMENTE Grocery E Food tra le categorie 
+16. Visualizzare tutti i business che hanno SOLAMENTE Grocery E Food tra le categorie
 
     ```
     db.yelpbusiness.find({categories: ["Grocery", "Food"]})
     db.yelpbusiness.find({categories: {$all: ["Grocery", "Food"], $size: 2}})
-    db.yelpbusinessdb.find({"categories": {"$size": 2}, "categories": ["Grocery", "Food"]})
-    -> 0 risultati
+    db.yelpbusiness.find({"categories": {"$size": 2}, "categories": ["Grocery", "Food"]})
     ```
 
 17. Visualizzare tutti i business che hanno 5 categorie 
 
     ```
     db.yelpbusiness.find({categories: {$size: 5}})
-    -> 17227 risultati
     ```
 
 18. Visualizzare tutti i business che hanno 5 categorie e la quinta categoria è Food 
 
     ```
     db.yelpbusiness.find({$and: [{categories: {$size: 5}}, {"categories.4": "Food"} ]})
+
     db.yelpbusiness.find({categories: {$size: 5}, "categories.4": "Food"} )
-    -> 604 risultati
     ```
 
 19. Visualizzare le prime due categorie di ogni business 
 
     ```
     db.yelpbusiness.find({}, {categories: {$slice: 2}})
-    -> 144072 risultati (tutti: si tratta solo di modificare la proiezione)
     ```
 
 20. Visualizzare unicamente le categorie dei business del Nevada 
 
     ```
     db.yelpbusiness.find({state: "NV"}, {"categories": 1, "state": 1})
-    -> 28214 risultati
     ```
 
 21. Visualizzare i valori distinti del campo city
@@ -166,6 +160,7 @@
 
     ```
     db.games.find({date: {$gte: new Date("2010-01-01"), $lte: new Date("2010-12-31")}})
+    
     db.games.find({$where: function(){ return this.date.getFullYear() == 2010}})
     ```
 
@@ -179,7 +174,9 @@
 
     ```
     db.games.find({teams: {$elemMatch: {won: 0, home: true}}})
+
     NO: db.games.find({teams: {won: 0, home: true}}) match esatto
+
     NO: db.games.find({"teams.won": 0, "teams.home": true}) condizioni in OR
     ```
 
@@ -187,6 +184,7 @@
 
     ```
     db.games.find({box: {$elemMatch: {players: {$elemMatch: {player: "Michael Jordan"}}}}})
+    
     db.games.find({box: {$elemMatch: {"players.player": "Michael Jordan"}}})
     db.games.find({"box.players.player": "Michael Jordan"} )
     ```
@@ -232,7 +230,7 @@
     db.restaurants.find({"grades": {"$elemMatch": {"score": {"$gt": 10}, "date":{"$gte": new Date("2014-01-01"), "$lt": new Date("2015-01-01")}}}})
     ```
 
-35. [Yelpbusiness] Contare i business di categoria Yoga che hanno ricevuto almeno 4 di punteggio (stars) e che sono aperti (is_open=1)
+35. [Yelpbusiness] Visualizzare i business di categoria Yoga che hanno ricevuto almeno 4 di punteggio (stars) e che sono aperti (is_open=1)
 
     ```
     db.yelpbusiness.find({ "categories": "Yoga", "stars": { "$gte": 4}, "is_open": 1})

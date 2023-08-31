@@ -6,6 +6,7 @@ services:
     image: mysql:5.7
     hostname: mysql
     container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_USER}
       MYSQL_DATABASE: ${MYSQL_PWD}
@@ -84,7 +85,7 @@ services:
     command: /bin/bash -c "mongoimport  --host=mongodb -d exercises -c foo --file=/data/foo.json --jsonArray &&
       mongorestore --host=mongodb -d exercises -c restaurants /data/restaurants.bson &&
       mongorestore --host=mongodb -d exercises -c games /data/games.bson &&
-      mongorestore --host=mongodb -d exercises -c yelp-business /data/yelp-business.bson"
+      mongorestore --host=mongodb -d exercises -c yelpbusiness /data/yelp-business.bson"
 
   neo4j:
     image: neo4j:5.2
