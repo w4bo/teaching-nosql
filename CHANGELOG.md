@@ -1,3 +1,10 @@
+## [1.0.47](https://github.com/w4bo/teaching-nosql/compare/1.0.46...1.0.47) (2023-08-31)
+
+
+### Bug Fixes
+
+* **mongodb:** moved datasets to https ([8a46f36](https://github.com/w4bo/teaching-nosql/commit/8a46f36db28fb3a9e7580d2659f279b5c9c88127))
+
 ## [1.0.46](https://github.com/w4bo/teaching-nosql/compare/1.0.45...1.0.46) (2023-05-02)
 
 
