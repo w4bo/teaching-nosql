@@ -1,3 +1,21 @@
+## [1.0.49](https://github.com/w4bo/teaching-nosql/compare/1.0.48...1.0.49) (2023-09-01)
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.3 ([02c805a](https://github.com/w4bo/teaching-nosql/commit/02c805a9520b0280a6b6be94a99be2add22c949d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.53 ([d238695](https://github.com/w4bo/teaching-nosql/commit/d238695b642a7bbb223f9509f379e588af8c10a5))
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v5.8.1 ([8db22f3](https://github.com/w4bo/teaching-nosql/commit/8db22f351597330715666406cee8d6d5f61696c3))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.5.3 ([733e31b](https://github.com/w4bo/teaching-nosql/commit/733e31bd8e3a4ded775f39a419711ae2a4754281))
+
 ## [1.0.48](https://github.com/w4bo/teaching-nosql/compare/1.0.47...1.0.48) (2023-08-31)
 
 
