@@ -1,3 +1,23 @@
+## [1.0.52](https://github.com/w4bo/teaching-nosql/compare/1.0.51...1.0.52) (2023-09-02)
+
+
+### Dependency updates
+
+* **deps:** update dependency jest to v29.6.4 ([1d40002](https://github.com/w4bo/teaching-nosql/commit/1d40002ce9dbe2782409e7b59aa10ad606590b01))
+* **deps:** update node.js to 18.17 ([689afdf](https://github.com/w4bo/teaching-nosql/commit/689afdf69f065110582efd1967c00406e972db8c))
+* **deps:** update redis docker tag to v7.2 ([9425442](https://github.com/w4bo/teaching-nosql/commit/942544297075865c3bd92377d23b9f25e50ab7e0))
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.3.1 ([5f74100](https://github.com/w4bo/teaching-nosql/commit/5f741001140d3f3e0fc05fdde5eb50426baad7c1))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.6.0 ([35fb0e9](https://github.com/w4bo/teaching-nosql/commit/35fb0e9db043bcd0a78188e181c9389fcb430920))
+* **deps:** update actions/setup-node action to v3.8.1 ([0893c81](https://github.com/w4bo/teaching-nosql/commit/0893c81a4240a9c201b55851353888c52e7e48d0))
+
 ## [1.0.51](https://github.com/w4bo/teaching-nosql/compare/1.0.50...1.0.51) (2023-09-02)
 
 
