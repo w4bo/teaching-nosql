@@ -1,3 +1,20 @@
+## [1.0.54](https://github.com/w4bo/teaching-nosql/compare/1.0.53...1.0.54) (2023-09-03)
+
+
+### Dependency updates
+
+* **deps:** update mongo docker tag to v7 ([4c60b1b](https://github.com/w4bo/teaching-nosql/commit/4c60b1b1d9087b30d8fbb144316546d0885d7054))
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6 ([58b5130](https://github.com/w4bo/teaching-nosql/commit/58b51307fb8b4886afb14753a5036370d5fc4ea1))
+
+
+### Build and continuous integration
+
+* **deps:** update dependency ubuntu to v22 ([174e7ce](https://github.com/w4bo/teaching-nosql/commit/174e7ce14dd5b224895fa87bf191b62108218147))
+
 ## [1.0.53](https://github.com/w4bo/teaching-nosql/compare/1.0.52...1.0.53) (2023-09-03)
 
 
