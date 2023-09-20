@@ -1,3 +1,10 @@
+## [1.0.58](https://github.com/w4bo/teaching-nosql/compare/1.0.57...1.0.58) (2023-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v4.6.9 ([dd2e73c](https://github.com/w4bo/teaching-nosql/commit/dd2e73c9c5f1016b5de6c7333a1742371ba5dd72))
+
 ## [1.0.57](https://github.com/w4bo/teaching-nosql/compare/1.0.56...1.0.57) (2023-09-20)
 
 
