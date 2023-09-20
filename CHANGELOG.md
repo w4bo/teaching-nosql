@@ -1,3 +1,19 @@
+## [1.0.57](https://github.com/w4bo/teaching-nosql/compare/1.0.56...1.0.57) (2023-09-20)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.56 ([d697009](https://github.com/w4bo/teaching-nosql/commit/d69700945b4ca21b369da585a868cdbba7bd542b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.58 ([213d8ba](https://github.com/w4bo/teaching-nosql/commit/213d8ba34955c64906b7f001f74fbee7b39a8f8e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.59 ([85daab8](https://github.com/w4bo/teaching-nosql/commit/85daab863e7ffa4eaf144346407a8d09f81ed472))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.60 ([7b8a4bb](https://github.com/w4bo/teaching-nosql/commit/7b8a4bb7a7c16176a672db1ece58ac8b09338f9c))
+* **deps:** update node.js to 18.18 ([57d7673](https://github.com/w4bo/teaching-nosql/commit/57d76731e0609eb95c87a687d76a5099af7eae07))
+
+
+### Bug Fixes
+
+* **deps:** update dependency cassandra-driver to v4.7.1 ([b0627f6](https://github.com/w4bo/teaching-nosql/commit/b0627f6afe8824f5600942d9f2af41ab1b51e7e0))
+
 ## [1.0.56](https://github.com/w4bo/teaching-nosql/compare/1.0.55...1.0.56) (2023-09-15)
 
 
