@@ -1,3 +1,20 @@
+## [1.0.64](https://github.com/w4bo/teaching-nosql/compare/1.0.63...1.0.64) (2023-11-16)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.71 ([3667628](https://github.com/w4bo/teaching-nosql/commit/3667628320d0b4f44e02c9a38fc6a271b16b5f81))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.72 ([8143e76](https://github.com/w4bo/teaching-nosql/commit/8143e769a088d5063109c2ae73aa9b5a6e143939))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.73 ([e121094](https://github.com/w4bo/teaching-nosql/commit/e121094b6bc61396c7c283a92ce8d6f8380c2071))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.74 ([3f06982](https://github.com/w4bo/teaching-nosql/commit/3f069825ef640dceca14ea867113a5e64ff31425))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.75 ([eff1598](https://github.com/w4bo/teaching-nosql/commit/eff15987a3bec766a909cb88ae83f9d191c15825))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.76 ([108d749](https://github.com/w4bo/teaching-nosql/commit/108d749c699198229e21132e0b3f5cee28ca83f2))
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.3.0 ([e664676](https://github.com/w4bo/teaching-nosql/commit/e66467612d4e79bf2bc25a88fc1aea44e766b260))
+
 ## [1.0.63](https://github.com/w4bo/teaching-nosql/compare/1.0.62...1.0.63) (2023-10-26)
 
 
