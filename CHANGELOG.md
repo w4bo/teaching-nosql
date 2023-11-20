@@ -1,3 +1,15 @@
+## [1.0.65](https://github.com/w4bo/teaching-nosql/compare/1.0.64...1.0.65) (2023-11-20)
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.77 ([b7003c8](https://github.com/w4bo/teaching-nosql/commit/b7003c89fc44b329da78e2945b30b11c2abdf7c3))
+
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v4.6.11 ([0def84a](https://github.com/w4bo/teaching-nosql/commit/0def84ab789c4475db505af1a513cdc4c22792c5))
+
 ## [1.0.64](https://github.com/w4bo/teaching-nosql/compare/1.0.63...1.0.64) (2023-11-16)
 
 
