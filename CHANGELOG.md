@@ -1,3 +1,15 @@
+## [1.0.77](https://github.com/w4bo/teaching-nosql/compare/1.0.76...1.0.77) (2024-02-20)
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.4 ([ee96616](https://github.com/w4bo/teaching-nosql/commit/ee96616f5d08d7ecd556e6fb7278cad5b5a3fbb4))
+
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.4.5 ([8a69715](https://github.com/w4bo/teaching-nosql/commit/8a69715c04bbf2345b9f602f739c6ece58dd0789))
+
 ## [1.0.76](https://github.com/w4bo/teaching-nosql/compare/1.0.75...1.0.76) (2024-02-13)
 
 
