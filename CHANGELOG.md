@@ -1,3 +1,20 @@
+## [1.0.85](https://github.com/w4bo/teaching-nosql/compare/1.0.84...1.0.85) (2024-05-16)
+
+
+### Dependency updates
+
+* **deps:** update node.js to 20.13 ([31bb917](https://github.com/w4bo/teaching-nosql/commit/31bb917f2df730cc5a31916420d37bf9a7c5dc56))
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.6.2 ([291d8c2](https://github.com/w4bo/teaching-nosql/commit/291d8c27120b768b3edb6c8446148dfe6aaa2692))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.5 ([2c45cf2](https://github.com/w4bo/teaching-nosql/commit/2c45cf28b7d76cfeda0466532ca976b62bdfe886))
+
 ## [1.0.84](https://github.com/w4bo/teaching-nosql/compare/1.0.83...1.0.84) (2024-05-07)
 
 
