@@ -1,3 +1,16 @@
+## [1.0.87](https://github.com/w4bo/teaching-nosql/compare/1.0.86...1.0.87) (2024-05-30)
+
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.5 ([a2413d9](https://github.com/w4bo/teaching-nosql/commit/a2413d9b8c22c464246c6f72fc5644d9d9331830))
+* **deps:** update node.js to 20.14 ([8c91f18](https://github.com/w4bo/teaching-nosql/commit/8c91f18cd6dab98322d42a1b782d3d93ab574020))
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v5.21.0 ([bc531a6](https://github.com/w4bo/teaching-nosql/commit/bc531a68fcf0e9beace6267d34a56f002dbe08c2))
+
 ## [1.0.86](https://github.com/w4bo/teaching-nosql/compare/1.0.85...1.0.86) (2024-05-17)
 
 
