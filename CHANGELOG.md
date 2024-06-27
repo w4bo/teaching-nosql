@@ -1,3 +1,15 @@
+## [1.0.89](https://github.com/w4bo/teaching-nosql/compare/1.0.88...1.0.89) (2024-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v5.22.0 ([91dbb8c](https://github.com/w4bo/teaching-nosql/commit/91dbb8ca75f7bcbb2142a91cbcbc0e75867a0539))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.7 ([0c12489](https://github.com/w4bo/teaching-nosql/commit/0c1248960a3e01fc2ab9c9a5ba109aba5c233af7))
+
 ## [1.0.88](https://github.com/w4bo/teaching-nosql/compare/1.0.87...1.0.88) (2024-05-30)
 
 
