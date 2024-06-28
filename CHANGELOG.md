@@ -1,3 +1,15 @@
+## [1.0.90](https://github.com/w4bo/teaching-nosql/compare/1.0.89...1.0.90) (2024-06-28)
+
+
+### Dependency updates
+
+* **deps:** update node.js to 20.15 ([9bf67da](https://github.com/w4bo/teaching-nosql/commit/9bf67da763cefe5ed0d71abf5f076e1f80dce39c))
+
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.8.0 ([61577f0](https://github.com/w4bo/teaching-nosql/commit/61577f00f634a1d2169059031a83dcb5b2edf501))
+
 ## [1.0.89](https://github.com/w4bo/teaching-nosql/compare/1.0.88...1.0.89) (2024-06-27)
 
 
