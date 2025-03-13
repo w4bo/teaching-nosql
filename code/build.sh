@@ -5,5 +5,5 @@ if test -f "games.bson"; then
 else
     cp .env.example .env
 fi
-docker-compose build
+docker compose build
 npm install

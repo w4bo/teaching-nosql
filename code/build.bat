@@ -3,5 +3,5 @@ IF EXIST ".env" (
 ) ELSE (
   copy .env.example .env
 )
-docker-compose build
+docker compose build
 npm install

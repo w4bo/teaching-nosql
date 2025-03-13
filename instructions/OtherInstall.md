@@ -3,7 +3,7 @@
     - Windows: https://docs.docker.com/desktop/windows/install/
     - Mac: https://docs.docker.com/desktop/mac/install/
     - Linux: https://docs.docker.com/engine/install/ubuntu/
-- Install `docker-compose`
+- Install `docker compose`
     - Windows and Mac: Docker Compose is already included in Docker Desktop
     - Linux: https://docs.docker.com/compose/install/
 - Run docker (sometimes docker has to be (re)started over and over again)
