@@ -1,3 +1,16 @@
+## <small>1.0.91 (2025-03-13)</small>
+
+* replace docker-compose with docker compose ([eff0b14](https://github.com/w4bo/teaching-nosql/commit/eff0b14))
+* Update build.yml ([0f6f5ce](https://github.com/w4bo/teaching-nosql/commit/0f6f5ce))
+* Update package.json ([08e159b](https://github.com/w4bo/teaching-nosql/commit/08e159b))
+* fix(deps): update dependency neo4j-driver to v5.23.0 ([6a21028](https://github.com/w4bo/teaching-nosql/commit/6a21028))
+* fix(deps): update dependency redis to v4.6.15 ([6f0570a](https://github.com/w4bo/teaching-nosql/commit/6f0570a))
+* fix(deps): update dependency redis to v4.7.0 ([a7bd172](https://github.com/w4bo/teaching-nosql/commit/a7bd172))
+* chore(deps): update dependency semantic-release-preconfigured-conventional-commits to v1.1.86 ([49d7708](https://github.com/w4bo/teaching-nosql/commit/49d7708))
+* chore(deps): update dependency semantic-release-preconfigured-conventional-commits to v1.1.87 ([7158cdb](https://github.com/w4bo/teaching-nosql/commit/7158cdb))
+* chore(deps): update node.js to 20.16 ([55fc585](https://github.com/w4bo/teaching-nosql/commit/55fc585))
+* ci(deps): update actions/setup-node action to v4.0.3 ([0bb2f8e](https://github.com/w4bo/teaching-nosql/commit/0bb2f8e))
+
 ## [1.0.90](https://github.com/w4bo/teaching-nosql/compare/1.0.89...1.0.90) (2024-06-28)
 
 
