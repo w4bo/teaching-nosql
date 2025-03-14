@@ -1,3 +1,19 @@
+## [1.0.92](https://github.com/w4bo/teaching-nosql/compare/1.0.91...1.0.92) (2025-03-14)
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v4.1.8 ([#273](https://github.com/w4bo/teaching-nosql/issues/273)) ([4a961d5](https://github.com/w4bo/teaching-nosql/commit/4a961d5793eedc6d705a5b3099f1c85a503facde))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.125 ([#267](https://github.com/w4bo/teaching-nosql/issues/267)) ([561c388](https://github.com/w4bo/teaching-nosql/commit/561c3889299c2d04d05199640fe70b71929b8411))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.4.7 ([#285](https://github.com/w4bo/teaching-nosql/issues/285)) ([141b15a](https://github.com/w4bo/teaching-nosql/commit/141b15ab47a1ac1c7926b75b9a6d1fae3f79845c))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.0.4 ([#279](https://github.com/w4bo/teaching-nosql/issues/279)) ([6bef90e](https://github.com/w4bo/teaching-nosql/commit/6bef90ec46d6b5f105dcca88fe5be1c98f09a676))
+* **deps:** update dependency node to v22 ([#291](https://github.com/w4bo/teaching-nosql/issues/291)) ([3a5d4ea](https://github.com/w4bo/teaching-nosql/commit/3a5d4ea74db4e180869d38ab20d12748b80d36da))
+
 ## <small>1.0.91 (2025-03-13)</small>
 
 * replace docker-compose with docker compose ([eff0b14](https://github.com/w4bo/teaching-nosql/commit/eff0b14))
