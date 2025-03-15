@@ -1,3 +1,17 @@
+## [1.0.94](https://github.com/w4bo/teaching-nosql/compare/1.0.93...1.0.94) (2025-03-15)
+
+### Dependency updates
+
+* **deps:** update redis docker tag to v7.4 ([#272](https://github.com/w4bo/teaching-nosql/issues/272)) ([982e33b](https://github.com/w4bo/teaching-nosql/commit/982e33ba4617cdbc7a49bc48854805dbf9caea42))
+
+### Bug Fixes
+
+* **deps:** update dependency cassandra-driver to v4.8.0 ([#289](https://github.com/w4bo/teaching-nosql/issues/289)) ([d31d66e](https://github.com/w4bo/teaching-nosql/commit/d31d66edeb918a9e9eb9bc796e4c5f0db76eaa09))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.2.0 ([#283](https://github.com/w4bo/teaching-nosql/issues/283)) ([6980c6c](https://github.com/w4bo/teaching-nosql/commit/6980c6c834a072d43c5e5b05bf312ad35f299c58))
+
 ## [1.0.93](https://github.com/w4bo/teaching-nosql/compare/1.0.92...1.0.93) (2025-03-14)
 
 ### Bug Fixes
