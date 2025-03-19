@@ -1,3 +1,19 @@
+## [1.0.97](https://github.com/w4bo/teaching-nosql/compare/1.0.96...1.0.97) (2025-03-19)
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v5 ([#276](https://github.com/w4bo/teaching-nosql/issues/276)) ([bd574b0](https://github.com/w4bo/teaching-nosql/commit/bd574b0843784ab7d7b46e3b85228794c5622bda))
+* **deps:** update mongo docker tag to v8 ([#280](https://github.com/w4bo/teaching-nosql/issues/280)) ([6d1baf0](https://github.com/w4bo/teaching-nosql/commit/6d1baf0b9fb18ecdaf7e67cb2ab2c10168655677))
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.15.0 ([#294](https://github.com/w4bo/teaching-nosql/issues/294)) ([8c8a31a](https://github.com/w4bo/teaching-nosql/commit/8c8a31ab35acfd92bb0685dd8f1357dd8263b54d))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.3.0 ([#293](https://github.com/w4bo/teaching-nosql/issues/293)) ([abcdfc1](https://github.com/w4bo/teaching-nosql/commit/abcdfc137ed72a23952785153115acf06bcd4088))
+* **deps:** update dependency ubuntu to v24 ([#282](https://github.com/w4bo/teaching-nosql/issues/282)) ([97750d7](https://github.com/w4bo/teaching-nosql/commit/97750d7673306b73aba4d0449fa8bf3bfc5a54e6))
+
 ## [1.0.96](https://github.com/w4bo/teaching-nosql/compare/1.0.95...1.0.96) (2025-03-15)
 
 ### Bug Fixes
