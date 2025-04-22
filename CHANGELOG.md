@@ -1,3 +1,13 @@
+## [1.0.99](https://github.com/w4bo/teaching-nosql/compare/1.0.98...1.0.99) (2025-04-22)
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.16.0 ([#298](https://github.com/w4bo/teaching-nosql/issues/298)) ([23b5b42](https://github.com/w4bo/teaching-nosql/commit/23b5b4223f99331ac0ba3ed18201cd3d219a6948))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.4.0 ([#297](https://github.com/w4bo/teaching-nosql/issues/297)) ([31fd626](https://github.com/w4bo/teaching-nosql/commit/31fd626a333e389d1db2f0c3dc416f9198f1a7f4))
+
 ## [1.0.98](https://github.com/w4bo/teaching-nosql/compare/1.0.97...1.0.98) (2025-04-11)
 
 ### Dependency updates
