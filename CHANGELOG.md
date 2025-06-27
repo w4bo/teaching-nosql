@@ -1,3 +1,20 @@
+## [1.0.107](https://github.com/w4bo/teaching-nosql/compare/1.0.106...1.0.107) (2025-06-27)
+
+### Dependency updates
+
+* **deps:** update dependency jest to v30 ([#318](https://github.com/w4bo/teaching-nosql/issues/318)) ([44fb476](https://github.com/w4bo/teaching-nosql/commit/44fb4765a9100dafe91ce3653c41bd1120fc0591))
+* **deps:** update dependency jest to v30.0.1 ([#319](https://github.com/w4bo/teaching-nosql/issues/319)) ([c3f0d55](https://github.com/w4bo/teaching-nosql/commit/c3f0d5517c24b0ba8818a17594dfb831a0fe80d7))
+* **deps:** update dependency jest to v30.0.2 ([#320](https://github.com/w4bo/teaching-nosql/issues/320)) ([2a0c121](https://github.com/w4bo/teaching-nosql/commit/2a0c121ec03847a6a4680d691295e911d9d6ce49))
+* **deps:** update dependency jest to v30.0.3 ([#321](https://github.com/w4bo/teaching-nosql/issues/321)) ([bc011fc](https://github.com/w4bo/teaching-nosql/commit/bc011fc722e3a04b751f31fae4efeaf412ef80f1))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.6.0 ([#323](https://github.com/w4bo/teaching-nosql/issues/323)) ([67bab92](https://github.com/w4bo/teaching-nosql/commit/67bab92844d45c698f09f193e1b0e1d3ea1cac79))
+
+### Build and continuous integration
+
+* **deps:** update node.js ([#322](https://github.com/w4bo/teaching-nosql/issues/322)) ([96f479f](https://github.com/w4bo/teaching-nosql/commit/96f479f7cd6b52a76b77a4c3ad02a114e1560632))
+
 ## [1.0.106](https://github.com/w4bo/teaching-nosql/compare/1.0.105...1.0.106) (2025-06-07)
 
 ### Bug Fixes
