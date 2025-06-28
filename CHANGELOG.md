@@ -1,3 +1,9 @@
+## [1.0.109](https://github.com/w4bo/teaching-nosql/compare/1.0.108...1.0.109) (2025-06-28)
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v17 ([#326](https://github.com/w4bo/teaching-nosql/issues/326)) ([1928eb1](https://github.com/w4bo/teaching-nosql/commit/1928eb1f8b888b7f8be48eef20ae025ec66778f4))
+
 ## [1.0.108](https://github.com/w4bo/teaching-nosql/compare/1.0.107...1.0.108) (2025-06-28)
 
 ### Dependency updates
