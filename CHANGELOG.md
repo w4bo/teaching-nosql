@@ -1,3 +1,13 @@
+## [1.0.108](https://github.com/w4bo/teaching-nosql/compare/1.0.107...1.0.108) (2025-06-28)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.134 ([#324](https://github.com/w4bo/teaching-nosql/issues/324)) ([2728f45](https://github.com/w4bo/teaching-nosql/commit/2728f45545c0ff053b5b22123ba0da3a46ca1895))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v16.6.1 ([#325](https://github.com/w4bo/teaching-nosql/issues/325)) ([8677c21](https://github.com/w4bo/teaching-nosql/commit/8677c218e86130af10558aa10e55bdc2db06ae52))
+
 ## [1.0.107](https://github.com/w4bo/teaching-nosql/compare/1.0.106...1.0.107) (2025-06-27)
 
 ### Dependency updates
