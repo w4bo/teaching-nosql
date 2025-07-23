@@ -1,3 +1,19 @@
+## [1.0.114](https://github.com/w4bo/teaching-nosql/compare/1.0.113...1.0.114) (2025-07-23)
+
+### Dependency updates
+
+* **deps:** update dependency jest to v30.0.5 ([#337](https://github.com/w4bo/teaching-nosql/issues/337)) ([fbd2be1](https://github.com/w4bo/teaching-nosql/commit/fbd2be1253ac3ca4add16b52e6408135c191018f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.137 ([#334](https://github.com/w4bo/teaching-nosql/issues/334)) ([7ee2f4c](https://github.com/w4bo/teaching-nosql/commit/7ee2f4ca257b595109c23bc9ad4ac549305e0c08))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.138 ([#335](https://github.com/w4bo/teaching-nosql/issues/335)) ([f2ae759](https://github.com/w4bo/teaching-nosql/commit/f2ae7592a2fcad67610e2b7f6f880d327982c082))
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v6.18.0 ([#338](https://github.com/w4bo/teaching-nosql/issues/338)) ([9ef70bb](https://github.com/w4bo/teaching-nosql/commit/9ef70bbcc81c77f3dd9a48bf65684dd5f644b575))
+
+### Build and continuous integration
+
+* **deps:** update dependency node to v22.17.1 ([#336](https://github.com/w4bo/teaching-nosql/issues/336)) ([a774368](https://github.com/w4bo/teaching-nosql/commit/a774368550098ed152370b0a6a618aa247bbbcf1))
+
 ## [1.0.113](https://github.com/w4bo/teaching-nosql/compare/1.0.112...1.0.113) (2025-07-10)
 
 ### Bug Fixes
