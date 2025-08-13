@@ -1,3 +1,18 @@
+## [1.0.119](https://github.com/w4bo/teaching-nosql/compare/1.0.118...1.0.119) (2025-08-13)
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v5.0.5 ([#347](https://github.com/w4bo/teaching-nosql/issues/347)) ([475e6ea](https://github.com/w4bo/teaching-nosql/commit/475e6eacde67aa571a7f66af880fdde115c599ac))
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v5.8.1 ([#350](https://github.com/w4bo/teaching-nosql/issues/350)) ([d5df1fe](https://github.com/w4bo/teaching-nosql/commit/d5df1fecd3b9e6a4fdc2952861a7bf2e684e66e0))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.3.0 ([#348](https://github.com/w4bo/teaching-nosql/issues/348)) ([37dba2c](https://github.com/w4bo/teaching-nosql/commit/37dba2c48f42fb139fd7a9bf1716d6ba08355743))
+* **deps:** update actions/checkout action to v5 ([#349](https://github.com/w4bo/teaching-nosql/issues/349)) ([5294523](https://github.com/w4bo/teaching-nosql/commit/52945236e5c9c279edfe8952952843bdd7b74482))
+
 ## [1.0.118](https://github.com/w4bo/teaching-nosql/compare/1.0.117...1.0.118) (2025-08-05)
 
 ### Dependency updates
