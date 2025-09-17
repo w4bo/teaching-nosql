@@ -1,3 +1,19 @@
+## [1.0.123](https://github.com/w4bo/teaching-nosql/compare/1.0.122...1.0.123) (2025-09-17)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.142 ([#360](https://github.com/w4bo/teaching-nosql/issues/360)) ([e2b6c46](https://github.com/w4bo/teaching-nosql/commit/e2b6c46e5fdaf3a5d33941602ba83cb5f11c9e0e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.143 ([#361](https://github.com/w4bo/teaching-nosql/issues/361)) ([fd7be67](https://github.com/w4bo/teaching-nosql/commit/fd7be67ed48e8d68b9a228ede911121fcb6e44b6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.145 ([#362](https://github.com/w4bo/teaching-nosql/issues/362)) ([0a5b3ca](https://github.com/w4bo/teaching-nosql/commit/0a5b3cae80971c45e4846da5d8034ca0793dc8d7))
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v5.28.2 ([#363](https://github.com/w4bo/teaching-nosql/issues/363)) ([43cab53](https://github.com/w4bo/teaching-nosql/commit/43cab530c34a0053bf4266eb5fcecd36e8ea216f))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v5 ([#359](https://github.com/w4bo/teaching-nosql/issues/359)) ([a8d3a0d](https://github.com/w4bo/teaching-nosql/commit/a8d3a0da59a58674ff222b24dda3c0e62f3d3499))
+
 ## [1.0.122](https://github.com/w4bo/teaching-nosql/compare/1.0.121...1.0.122) (2025-09-07)
 
 ### Dependency updates
