@@ -1,3 +1,21 @@
+## [1.0.128](https://github.com/w4bo/teaching-nosql/compare/1.0.127...1.0.128) (2025-10-24)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.148 ([#374](https://github.com/w4bo/teaching-nosql/issues/374)) ([20d84f8](https://github.com/w4bo/teaching-nosql/commit/20d84f8e4761c3f90d8e1613e4b3d9cad2285195))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.149 ([#375](https://github.com/w4bo/teaching-nosql/issues/375)) ([2cb10ba](https://github.com/w4bo/teaching-nosql/commit/2cb10bab99159f9f0ddf764c25332611b873cef4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.150 ([#377](https://github.com/w4bo/teaching-nosql/issues/377)) ([0e23952](https://github.com/w4bo/teaching-nosql/commit/0e239526330a469e399a4a67ca1a88a9c9a73dda))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.152 ([#378](https://github.com/w4bo/teaching-nosql/issues/378)) ([5c3664a](https://github.com/w4bo/teaching-nosql/commit/5c3664a99fe173f59e6ce967996e3eacf8819aca))
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v5.9.0 ([#379](https://github.com/w4bo/teaching-nosql/issues/379)) ([d36911a](https://github.com/w4bo/teaching-nosql/commit/d36911ac2a76a6822d57227060f2de1ad95c7429))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6 ([#373](https://github.com/w4bo/teaching-nosql/issues/373)) ([1fe4446](https://github.com/w4bo/teaching-nosql/commit/1fe4446ac34b034304b75c547c7dca132df8789b))
+* **deps:** update node.js ([#376](https://github.com/w4bo/teaching-nosql/issues/376)) ([ef5569a](https://github.com/w4bo/teaching-nosql/commit/ef5569a4a657126b1ce63c37367f0779d0192d3a))
+
 ## [1.0.127](https://github.com/w4bo/teaching-nosql/compare/1.0.126...1.0.127) (2025-10-02)
 
 ### Bug Fixes
