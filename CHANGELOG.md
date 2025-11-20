@@ -1,3 +1,21 @@
+## [1.0.131](https://github.com/w4bo/teaching-nosql/compare/1.0.130...1.0.131) (2025-11-20)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.155 ([#388](https://github.com/w4bo/teaching-nosql/issues/388)) ([9eb0bba](https://github.com/w4bo/teaching-nosql/commit/9eb0bba3aba45c8cf976e0182bb247c9b542dbb1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.156 ([#389](https://github.com/w4bo/teaching-nosql/issues/389)) ([93bafb2](https://github.com/w4bo/teaching-nosql/commit/93bafb2cfd3db00f86d77a1297d614b5006aa439))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.157 ([#391](https://github.com/w4bo/teaching-nosql/issues/391)) ([9b4f4ef](https://github.com/w4bo/teaching-nosql/commit/9b4f4ef0233614d7df714618878712065c4d5aba))
+* **deps:** update redis docker tag to v8.4 ([#393](https://github.com/w4bo/teaching-nosql/issues/393)) ([f0d5936](https://github.com/w4bo/teaching-nosql/commit/f0d59366816b23ed0277382f6e6591461bdcfb21))
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v5.10.0 ([#394](https://github.com/w4bo/teaching-nosql/issues/394)) ([a6dc3ef](https://github.com/w4bo/teaching-nosql/commit/a6dc3ef1d190b1f1a7aa2ee18dcc52aa243143e1))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v5.0.1 ([#392](https://github.com/w4bo/teaching-nosql/issues/392)) ([2ca24d8](https://github.com/w4bo/teaching-nosql/commit/2ca24d811fbec5a60196f5a0c7f0b9e02a6a16e0))
+* **deps:** update dependency node to v24.11.1 ([#390](https://github.com/w4bo/teaching-nosql/issues/390)) ([90946b1](https://github.com/w4bo/teaching-nosql/commit/90946b12f5360018e558b815dcb01a7cc21f4f21))
+
 ## [1.0.130](https://github.com/w4bo/teaching-nosql/compare/1.0.129...1.0.130) (2025-11-07)
 
 ### Dependency updates
