@@ -1,3 +1,24 @@
+## [1.0.132](https://github.com/w4bo/teaching-nosql/compare/1.0.131...1.0.132) (2026-02-04)
+
+### Dependency updates
+
+* **deps:** update node.js to 24.12 ([#398](https://github.com/w4bo/teaching-nosql/issues/398)) ([9356cf1](https://github.com/w4bo/teaching-nosql/commit/9356cf1e399ac2734302170b5960315ef5374c55))
+* **deps:** update node.js to 24.13 ([#400](https://github.com/w4bo/teaching-nosql/issues/400)) ([72fe07a](https://github.com/w4bo/teaching-nosql/commit/72fe07a2969f10439653e3345d990087e921dd1b))
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v7.1.0 ([#404](https://github.com/w4bo/teaching-nosql/issues/404)) ([d84458a](https://github.com/w4bo/teaching-nosql/commit/d84458a1dfd51705b2d9ae6094f6bb587c555e3c))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v6 ([#395](https://github.com/w4bo/teaching-nosql/issues/395)) ([781f820](https://github.com/w4bo/teaching-nosql/commit/781f820a4f4085a9f44bcdd36c01ed28bb5379cc))
+* **deps:** update actions/checkout action to v6.0.1 ([#396](https://github.com/w4bo/teaching-nosql/issues/396)) ([7fd5c28](https://github.com/w4bo/teaching-nosql/commit/7fd5c285d8b3c88aff5b5ae009f0c99b8ba4d206))
+* **deps:** update actions/checkout action to v6.0.2 ([#403](https://github.com/w4bo/teaching-nosql/issues/403)) ([9741dca](https://github.com/w4bo/teaching-nosql/commit/9741dcaeb9d543e224e1574d3a67b3cb6e8468e0))
+* **deps:** update actions/setup-node action to v6.1.0 ([#397](https://github.com/w4bo/teaching-nosql/issues/397)) ([4d5d24b](https://github.com/w4bo/teaching-nosql/commit/4d5d24bbaed27f89042f9741ddccf86c2a36c23d))
+* **deps:** update actions/setup-node action to v6.2.0 ([#402](https://github.com/w4bo/teaching-nosql/issues/402)) ([ebbd9e3](https://github.com/w4bo/teaching-nosql/commit/ebbd9e3edfa78dfc72b156a3b8aef4e246873ed6))
+* **deps:** update dependency node to v24.12.0 ([#399](https://github.com/w4bo/teaching-nosql/issues/399)) ([77ea7f1](https://github.com/w4bo/teaching-nosql/commit/77ea7f1c4be169f25cd630ca81685fd42aa19de5))
+* **deps:** update dependency node to v24.13.0 ([#401](https://github.com/w4bo/teaching-nosql/issues/401)) ([255aa6e](https://github.com/w4bo/teaching-nosql/commit/255aa6e62d253a53f05366f5b285fd94b749ea98))
+
 ## [1.0.131](https://github.com/w4bo/teaching-nosql/compare/1.0.130...1.0.131) (2025-11-20)
 
 ### Dependency updates
