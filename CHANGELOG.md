@@ -1,3 +1,17 @@
+## [1.0.134](https://github.com/w4bo/teaching-nosql/compare/1.0.133...1.0.134) (2026-02-13)
+
+### Dependency updates
+
+* **deps:** update redis docker tag to v8.6 ([#406](https://github.com/w4bo/teaching-nosql/issues/406)) ([848a4a7](https://github.com/w4bo/teaching-nosql/commit/848a4a75138b530fbca1c363b025200d6539bf33))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v17.3.1 ([#408](https://github.com/w4bo/teaching-nosql/issues/408)) ([1700ec1](https://github.com/w4bo/teaching-nosql/commit/1700ec114669ffc0465c8b71c787a25101e27925))
+
+### Build and continuous integration
+
+* **deps:** update dependency node to v24.13.1 ([#407](https://github.com/w4bo/teaching-nosql/issues/407)) ([d7280c2](https://github.com/w4bo/teaching-nosql/commit/d7280c2f79db2e86ae9a6ae324c9dc60af698de4))
+
 ## [1.0.133](https://github.com/w4bo/teaching-nosql/compare/1.0.132...1.0.133) (2026-02-06)
 
 ### Bug Fixes
