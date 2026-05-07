@@ -1,3 +1,9 @@
+## [1.0.142](https://github.com/w4bo/teaching-nosql/compare/1.0.141...1.0.142) (2026-05-07)
+
+### Bug Fixes
+
+* **deps:** update dependency cassandra-driver to v4.9.0 ([#425](https://github.com/w4bo/teaching-nosql/issues/425)) ([3e05b70](https://github.com/w4bo/teaching-nosql/commit/3e05b70a5a8196b13a7b1f93cf3fd58536a06848))
+
 ## [1.0.141](https://github.com/w4bo/teaching-nosql/compare/1.0.140...1.0.141) (2026-04-20)
 
 ### Dependency updates
