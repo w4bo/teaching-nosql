@@ -1,3 +1,22 @@
+## [1.0.143](https://github.com/w4bo/teaching-nosql/compare/1.0.142...1.0.143) (2026-05-28)
+
+### Dependency updates
+
+* **deps:** update dependency jest to v30.4.0 ([#426](https://github.com/w4bo/teaching-nosql/issues/426)) ([3fd211b](https://github.com/w4bo/teaching-nosql/commit/3fd211bffdc62125c78c50b4db7ee8a1b53905c2))
+* **deps:** update dependency jest to v30.4.1 ([#427](https://github.com/w4bo/teaching-nosql/issues/427)) ([4c897bb](https://github.com/w4bo/teaching-nosql/commit/4c897bb6787ac7e5938ab8e06576de6aeb6f58ca))
+* **deps:** update dependency jest to v30.4.2 ([#428](https://github.com/w4bo/teaching-nosql/issues/428)) ([91a1779](https://github.com/w4bo/teaching-nosql/commit/91a1779d5d6948b2378a809b6b7132d11acbaa0e))
+* **deps:** update mongo docker tag to v8.3 ([#424](https://github.com/w4bo/teaching-nosql/issues/424)) ([bab541a](https://github.com/w4bo/teaching-nosql/commit/bab541a6a985201328ba8fbf361e743588a748ea))
+* **deps:** update node.js to 24.16 ([#429](https://github.com/w4bo/teaching-nosql/issues/429)) ([4d668df](https://github.com/w4bo/teaching-nosql/commit/4d668dffcbf39c93fc0c1cd7fc821477fca8c799))
+* **deps:** update redis docker tag to v8.8 ([#431](https://github.com/w4bo/teaching-nosql/issues/431)) ([cc0ca6c](https://github.com/w4bo/teaching-nosql/commit/cc0ca6cf5c65424e87ada622343589dc3b711b3b))
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v6 ([#432](https://github.com/w4bo/teaching-nosql/issues/432)) ([4604ce2](https://github.com/w4bo/teaching-nosql/commit/4604ce2a8070bb94431fb0de9caa18329c887723))
+
+### Build and continuous integration
+
+* **deps:** update dependency node to v24.16.0 ([#430](https://github.com/w4bo/teaching-nosql/issues/430)) ([fe98ff2](https://github.com/w4bo/teaching-nosql/commit/fe98ff2c1e0b8f78b2fe21d4e814aedd51c6bbae))
+
 ## [1.0.142](https://github.com/w4bo/teaching-nosql/compare/1.0.141...1.0.142) (2026-05-07)
 
 ### Bug Fixes
