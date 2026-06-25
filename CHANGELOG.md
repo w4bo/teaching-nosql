@@ -1,3 +1,15 @@
+## [1.0.146](https://github.com/w4bo/teaching-nosql/compare/1.0.145...1.0.146) (2026-06-25)
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v6.0.1 ([#439](https://github.com/w4bo/teaching-nosql/issues/439)) ([6835466](https://github.com/w4bo/teaching-nosql/commit/6835466366e3301a279935d1ce0243071b38546a))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v7 ([#437](https://github.com/w4bo/teaching-nosql/issues/437)) ([48fb5c8](https://github.com/w4bo/teaching-nosql/commit/48fb5c8360e44ac9db8a902821bbad6053a9e189))
+* **deps:** update node.js ([#436](https://github.com/w4bo/teaching-nosql/issues/436)) ([51b54c6](https://github.com/w4bo/teaching-nosql/commit/51b54c6ae511a316dea222c1092abbf235f3d0d2))
+* **deps:** update node.js ([#438](https://github.com/w4bo/teaching-nosql/issues/438)) ([acf4b1f](https://github.com/w4bo/teaching-nosql/commit/acf4b1f5fb23b26c6dfe602c457e936d6da79f36))
+
 ## [1.0.145](https://github.com/w4bo/teaching-nosql/compare/1.0.144...1.0.145) (2026-06-10)
 
 ### Bug Fixes
