@@ -1,3 +1,9 @@
+## [1.0.147](https://github.com/w4bo/teaching-nosql/compare/1.0.146...1.0.147) (2026-06-26)
+
+### Bug Fixes
+
+* **deps:** update dependency mongodb to v7.4.0 ([#440](https://github.com/w4bo/teaching-nosql/issues/440)) ([7fdb238](https://github.com/w4bo/teaching-nosql/commit/7fdb238ab4d4f099cd10c83e3e330f2a36ac2082))
+
 ## [1.0.146](https://github.com/w4bo/teaching-nosql/compare/1.0.145...1.0.146) (2026-06-25)
 
 ### Bug Fixes
