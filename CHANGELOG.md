@@ -1,3 +1,20 @@
+## [1.0.151](https://github.com/w4bo/teaching-nosql/compare/1.0.150...1.0.151) (2026-08-01)
+
+### Dependency updates
+
+* **deps:** update redis docker tag to v8.10 ([#449](https://github.com/w4bo/teaching-nosql/issues/449)) ([b4ff035](https://github.com/w4bo/teaching-nosql/commit/b4ff035ef296d182f8a77f25390ac2f361ff9fe1))
+
+### Bug Fixes
+
+* **deps:** update dependency redis to v6.2.0 ([#450](https://github.com/w4bo/teaching-nosql/issues/450)) ([f33a8d9](https://github.com/w4bo/teaching-nosql/commit/f33a8d98ae9233ed4c3f2d148340086f9f1069e4))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v7.0.1 ([#446](https://github.com/w4bo/teaching-nosql/issues/446)) ([4febf35](https://github.com/w4bo/teaching-nosql/commit/4febf35228812a2ebfc2c061ba22469f3e670c19))
+* **deps:** update actions/setup-node action to v6.5.0 ([#444](https://github.com/w4bo/teaching-nosql/issues/444)) ([6ad258b](https://github.com/w4bo/teaching-nosql/commit/6ad258bfdf9643c425a3241f1eafa8d1af801c43))
+* **deps:** update actions/setup-node action to v7 ([#445](https://github.com/w4bo/teaching-nosql/issues/445)) ([e6c40a9](https://github.com/w4bo/teaching-nosql/commit/e6c40a98fb71b797c934c66e92d1892876e4942f))
+* **deps:** update dependency node to v24.18.1 ([#448](https://github.com/w4bo/teaching-nosql/issues/448)) ([9fc8d43](https://github.com/w4bo/teaching-nosql/commit/9fc8d43255de099beb19436232e086da176c9721))
+
 ## [1.0.150](https://github.com/w4bo/teaching-nosql/compare/1.0.149...1.0.150) (2026-07-08)
 
 ### Bug Fixes
