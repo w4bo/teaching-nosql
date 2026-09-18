@@ -1,3 +1,21 @@
+## [1.0.153](https://github.com/w4bo/teaching-nosql/compare/1.0.152...1.0.153) (2026-09-18)
+
+### Dependency updates
+
+* **deps:** update cassandra docker tag to v5.0.9 ([#453](https://github.com/w4bo/teaching-nosql/issues/453)) ([840ecb0](https://github.com/w4bo/teaching-nosql/commit/840ecb0d2556fda61e1da37e1588c708d8b6cf1f))
+* **deps:** update dependency jest to v30.5.0 ([#458](https://github.com/w4bo/teaching-nosql/issues/458)) ([e39a13b](https://github.com/w4bo/teaching-nosql/commit/e39a13bbaf4a2e9b3c6c79aa48c9816a1653d713))
+* **deps:** update dependency jest to v30.5.1 ([#459](https://github.com/w4bo/teaching-nosql/issues/459)) ([8447753](https://github.com/w4bo/teaching-nosql/commit/8447753eddd953e3e727ac816610cee7aba751a8))
+* **deps:** update node.js to 24.20 ([#456](https://github.com/w4bo/teaching-nosql/issues/456)) ([55c4dd7](https://github.com/w4bo/teaching-nosql/commit/55c4dd7f82948afc3cf3e50a7e1564ff664a7843))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v18 ([#461](https://github.com/w4bo/teaching-nosql/issues/461)) ([95283a1](https://github.com/w4bo/teaching-nosql/commit/95283a1decb0e45076221452f9787a164479a0ae))
+
+### Build and continuous integration
+
+* **deps:** update dependency node to v24.20.0 ([#457](https://github.com/w4bo/teaching-nosql/issues/457)) ([b104abc](https://github.com/w4bo/teaching-nosql/commit/b104abc277a45d6642efc707285afbc839bbe012))
+* **deps:** update node.js ([#460](https://github.com/w4bo/teaching-nosql/issues/460)) ([9293a99](https://github.com/w4bo/teaching-nosql/commit/9293a9933908b151a67c37276c58b14cf2f8c144))
+
 ## [1.0.152](https://github.com/w4bo/teaching-nosql/compare/1.0.151...1.0.152) (2026-08-12)
 
 ### Dependency updates
