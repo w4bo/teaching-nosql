@@ -8,7 +8,7 @@
     "jest": "30.5.2"
   },
   "dependencies": {
-    "cassandra-driver": "4.9.0",
+    "cassandra-driver": "4.10.0",
     "dotenv": "18.0.3",
     "mongodb": "7.5.0",
     "mysql": "2.18.1",
