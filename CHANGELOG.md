@@ -1,3 +1,13 @@
+## [1.0.161](https://github.com/w4bo/teaching-nosql/compare/1.0.160...1.0.161) (2026-10-07)
+
+### Dependency updates
+
+* **deps:** update mongo docker tag to v9 ([#471](https://github.com/w4bo/teaching-nosql/issues/471)) ([ff1c8ac](https://github.com/w4bo/teaching-nosql/commit/ff1c8acbcbd06de14f6136160fd9a0ff90aee2e4))
+
+### Bug Fixes
+
+* **deps:** update dependency dotenv to v18.0.6 ([#472](https://github.com/w4bo/teaching-nosql/issues/472)) ([cc0f2d5](https://github.com/w4bo/teaching-nosql/commit/cc0f2d57429ed2c60f24fa70c00b2851f6d0ccfc))
+
 ## [1.0.160](https://github.com/w4bo/teaching-nosql/compare/1.0.159...1.0.160) (2026-10-01)
 
 ### Bug Fixes
