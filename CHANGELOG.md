@@ -1,3 +1,9 @@
+## [1.0.168](https://github.com/w4bo/teaching-nosql/compare/1.0.167...1.0.168) (2026-11-12)
+
+### Bug Fixes
+
+* **deps:** update dependency neo4j-driver to v6.3.2 ([#486](https://github.com/w4bo/teaching-nosql/issues/486)) ([844e859](https://github.com/w4bo/teaching-nosql/commit/844e8592f0eab2cca99fe26952335ed294715084))
+
 ## [1.0.167](https://github.com/w4bo/teaching-nosql/compare/1.0.166...1.0.167) (2026-11-09)
 
 ### Dependency updates
